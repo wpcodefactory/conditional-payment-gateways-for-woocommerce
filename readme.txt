@@ -3,7 +3,7 @@ Contributors: wpcodefactory, algoritmika, anbinder
 Tags: woocommerce, payment gateway, woo commerce
 Requires at least: 4.4
 Tested up to: 6.1
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -48,7 +48,7 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 
 == Changelog ==
 
-= 2.1.1 - 09/11/2022 =
+= 2.1.1 - 10/11/2022 =
 * WC tested up to: 7.1.
 * Tested up to: 6.1.
 * Readme.txt updated.
