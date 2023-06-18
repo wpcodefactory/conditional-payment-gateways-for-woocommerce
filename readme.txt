@@ -1,9 +1,9 @@
 === Conditional Payment Gateways for WooCommerce ===
-Contributors: wpcodefactory, algoritmika, anbinder
+Contributors: wpcodefactory, algoritmika, anbinder, omardabbas, kousikmukherjeeli
 Tags: woocommerce, payment gateway, woo commerce
 Requires at least: 4.4
-Tested up to: 6.1
-Stable tag: 2.1.1
+Tested up to: 6.2
+Stable tag: 2.1.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -47,6 +47,10 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 3. Start by visiting plugin settings at "WooCommerce > Settings > Conditional Payment Gateways".
 
 == Changelog ==
+
+= 2.1.2 - 18/06/2023 =
+* WC tested up to: 7.8.
+* Tested up to: 6.2.
 
 = 2.1.1 - 10/11/2022 =
 * WC tested up to: 7.1.
