@@ -1,432 +1,432 @@
-#: includes/class-alg-wc-cpg-core.php:133
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\class-alg-wc-cpg-core.php:133
 #, php-format
 msgid "[%s > %s] Disabling: %s;"
 msgstr ""
 
-#: includes/class-alg-wc-cpg.php:130
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\class-alg-wc-cpg.php:130
 msgid "Settings"
 msgstr ""
 
-#: includes/class-alg-wc-cpg.php:133
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\class-alg-wc-cpg.php:133
 msgid "Go Pro"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:44
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:44
 msgid "Cart Total"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:56
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:56
 msgid "Hides payment gateways based on min/max cart (i.e. order) amounts."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:70
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:70
 msgid ""
 "Payment gateway will be hidden if cart total is <strong>below</strong> this "
 "amount."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:72
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:72
 msgid ""
 "Payment gateway will be hidden if cart total <strong>exceeds</strong> this "
 "amount."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:105
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:105
 msgid ""
 "Minimum amount for \"%gateway_title%\" is %value%. Your cart total is %result"
 "%."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:107
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:107
 msgid ""
 "Maximum amount for \"%gateway_title%\" is %value%. Your cart total is %result"
 "%."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:147
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:147
 msgid "Cart Total Calculation"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:148
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:148
 msgid ""
 "This section sets how cart total should be calculated when comparing it with "
 "min/max amounts."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:153
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:153
 msgid "Cart total"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:154
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:154
 #, php-format
 msgid "You should use %s shortcode here."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:179
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:179
 msgid "If set to zero - option is ignored."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:180
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:180
 #, php-format
 msgid "For decimal values use dot %s symbol."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:181
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:181
 #, php-format
 msgid ""
 "In \"%s\": %s will output current cart total, and %s will output current "
 "gateway min or max amount."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:182
-#: includes/settings/class-alg-wc-cpg-settings-section.php:129
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:182
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:129
 msgid "Additional notice"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:209
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-cart-total.php:209
 #, php-format
 msgid "[%s] Value: %s; Current: %s;"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:44
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-currency.php:44
 msgid "Currency"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:56
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-currency.php:56
 msgid ""
 "Hides payment gateways by the current currency. For example, this is useful, "
 "if you are using some additional currency switcher plugin."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:66
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-currency.php:66
 msgid "\"%gateway_title%\" is not available for the current currency."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:77
-#: includes/modules/class-alg-wc-cpg-module-language.php:82
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-currency.php:77
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-language.php:82
 #, php-format
 msgid ""
 "You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the "
 "\"Additional notice\" values."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:130
-#: includes/modules/class-alg-wc-cpg-module-language.php:135
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-currency.php:130
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-language.php:135
 msgid "Select all"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:131
-#: includes/modules/class-alg-wc-cpg-module-language.php:136
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-currency.php:131
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-language.php:136
 msgid "Deselect all"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:34
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-customer-ip.php:34
 msgid "Customer IP"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:56
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-customer-ip.php:56
 msgid "Hides payment gateways by current customer IP."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:66
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-customer-ip.php:66
 msgid "\"%gateway_title%\" is not available for your IP address."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:77
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-customer-ip.php:77
 #, php-format
 msgid "Options must be set as list of IPs, one IP per line, e.g.: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:44
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:44
 msgid "Date/Time"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:56
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:56
 msgid "Hides payment gateways by current date and time."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:66
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:66
 msgid "Currently \"%gateway_title%\" is not available."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:79
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:79
 #, php-format
 msgid ""
 "Options must be set as date range(s) in %s format, i.e. dates must be "
 "separated with the hyphen %s symbol."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:81
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:81
 #, php-format
 msgid ""
 "You can add multiple date ranges, one per line (algorithm stops on first "
 "matching date range), i.e.: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:83
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:83
 #, php-format
 msgid ""
 "Dates can be set in any format parsed by the PHP %s function, except you "
 "can't use hyphen %s symbol, as it's reserved for separating %s and %s values."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:85
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:85
 #, php-format
 msgid "Current date: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:100
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:100
 #, php-format
 msgid "Enable payment gateway only before 3:00 PM each day: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:102
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:102
 #, php-format
 msgid ""
 "Enable payment gateway only before 3:00 PM each day, or before 5:00 PM on "
 "Mondays: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:104
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:104
 #, php-format
 msgid "Enable payment gateway for the summer months only: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:106
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:106
 #, php-format
 msgid "Enable payment gateway for the February only: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:111
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:111
 #, php-format
 msgid "Disable payment gateway each day after 4:00 PM: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:113
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:113
 #, php-format
 msgid ""
 "Disable payment gateway each day after 4:00 PM, and for the whole day on "
 "weekends: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:115
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:115
 #, php-format
 msgid "Disable payment gateway for the summer months: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:117
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:117
 #, php-format
 msgid "Disable payment gateway for the February: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:152
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:152
 #, php-format
 msgid "from %s to %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:153
-#: includes/modules/classes/class-alg-wc-cpg-module.php:62
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-date-time.php:153
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\classes\class-alg-wc-cpg-module.php:62
 #, php-format
 msgid "[%s] Value: %s; Current: %s; Result: %s;"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:44
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-language.php:44
 msgid "Language"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:57
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-language.php:57
 msgid "WPML or Polylang plugin is active."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:58
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-language.php:58
 msgid "WPML or Polylang plugin is disabled."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:59
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-language.php:59
 #, php-format
 msgid "Hides payment gateways by the current %s or %s language."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:71
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-language.php:71
 msgid "\"%gateway_title%\" is not available for the current language."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-user.php:44
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-user.php:44
 msgid "User"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-user.php:56
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-user.php:56
 msgid "Hides payment gateways by current user ID."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-user.php:66
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-user.php:66
 msgid "\"%gateway_title%\" is not available for the current user."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-user.php:77
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-user.php:77
 #, php-format
 msgid "Options must be set as list of user IDs, one per line, e.g.: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-user.php:79
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\class-alg-wc-cpg-module-user.php:79
 #, php-format
 msgid "For guests, i.e. not logged in users, use %s (zero)."
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:169
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\classes\class-alg-wc-cpg-module.php:169
 #, php-format
 msgid "Require %s"
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:172
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\classes\class-alg-wc-cpg-module.php:172
 #, php-format
 msgid "Exclude %s"
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:175
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\classes\class-alg-wc-cpg-module.php:175
 #, php-format
 msgid "Minimum %s"
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:178
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\classes\class-alg-wc-cpg-module.php:178
 #, php-format
 msgid "Maximum %s"
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:244
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\modules\classes\class-alg-wc-cpg-module.php:244
 #, php-format
 msgid ""
 "You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the "
 "values."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:47
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:47
 msgid "Conditional Payment Gateways Options"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:52
-#: includes/settings/class-alg-wc-cpg-settings.php:25
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:52
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings.php:25
 msgid "Conditional Payment Gateways"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:53
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:53
 msgid "Enable plugin"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:59
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:59
 msgid "Debug"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:60
-#: includes/settings/class-alg-wc-cpg-settings-general.php:69
-#: includes/settings/class-alg-wc-cpg-settings-section.php:130
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:60
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:69
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:130
 msgid "Enable"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:61
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:61
 #, php-format
 msgid "Will add a log to %s."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:62
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:62
 msgid "WooCommerce > Status > Logs"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:68
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:68
 msgid "Leave at least one gateway"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:70
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:70
 msgid ""
 "Will ensure that when all payment gateways do not match \"enabled\" "
 "criteria, one last remaining gateway will still remain active in any case."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:76
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:76
 msgid "Notice styling"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:77
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:77
 msgid "Will be used for all additional (optional) notices."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:83
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:83
 msgid "Notice"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:84
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:84
 msgid "Error"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:85
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:85
 msgid "Success"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:96
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:96
 msgid "Available Conditions"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:115
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:115
 msgid "Conditions"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:139
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-general.php:139
 msgid "General"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:102
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:102
 msgid "Enable/disable"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:103
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:103
 msgid "Enable section"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:131
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:131
 msgid ""
 "In addition to hiding a gateway, you can also add extra notice on the "
 "checkout page."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:137
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:137
 #, php-format
 msgid "Available placeholder(s): %s."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:139
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:139
 msgid "You can use HTML and/or shortcodes here."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:157
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:157
 msgid "Notes"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:161
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:161
 msgid "Notes & Examples"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:164
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings-section.php:164
 #, php-format
 msgid "Examples: %s"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:45
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings.php:45
 msgid "Reset Settings"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:50
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings.php:50
 msgid "Reset section settings"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:51
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings.php:51
 msgid "Reset"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:52
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings.php:52
 msgid "Check the box and save changes to reset."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:80
-#: includes/settings/class-alg-wc-cpg-settings.php:95
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings.php:80
+#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\conditional-payment-gateways-for-woocommerce-pro\includes\settings\class-alg-wc-cpg-settings.php:95
 msgid "Your settings have been reset."
 msgstr ""
