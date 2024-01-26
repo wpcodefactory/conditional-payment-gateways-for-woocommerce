@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Section Settings
  *
- * @version 2.1.0
+ * @version 2.2.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -13,6 +13,30 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if ( ! class_exists( 'Alg_WC_CPG_Settings_Section' ) ) :
 
 class Alg_WC_CPG_Settings_Section {
+
+	/**
+	 * id.
+	 *
+	 * @version 2.2.0
+	 * @since   2.2.0
+	 */
+	public $id;
+
+	/**
+	 * desc.
+	 *
+	 * @version 2.2.0
+	 * @since   2.2.0
+	 */
+	public $desc;
+
+	/**
+	 * module.
+	 *
+	 * @version 2.2.0
+	 * @since   2.2.0
+	 */
+	public $module;
 
 	/**
 	 * Constructor.

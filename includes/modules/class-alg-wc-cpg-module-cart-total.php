@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Module - Cart Total
  *
- * @version 2.1.0
+ * @version 2.2.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -47,13 +47,13 @@ class Alg_WC_CPG_Module_Cart_Total extends Alg_WC_CPG_Module {
 	/**
 	 * get_desc.
 	 *
-	 * @version 2.0.0
+	 * @version 2.2.0
 	 * @since   2.0.0
 	 *
 	 * @todo    [next] (desc) better desc?
 	 */
 	function get_desc() {
-		return __( 'Hides payment gateways based on min/max cart (i.e. order) amounts.', 'conditional-payment-gateways-for-woocommerce' );
+		return __( 'Hides payment gateways based on min/max cart (i.e., order) amounts.', 'conditional-payment-gateways-for-woocommerce' );
 	}
 
 	/**

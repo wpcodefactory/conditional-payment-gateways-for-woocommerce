@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Module
  *
- * @version 2.1.0
+ * @version 2.2.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -13,6 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if ( ! class_exists( 'Alg_WC_CPG_Module' ) ) :
 
 abstract class Alg_WC_CPG_Module {
+
+	/**
+	 * current_value.
+	 *
+	 * @version 2.2.0
+	 * @since   2.2.0
+	 */
+	public $current_value;
 
 	/**
 	 * Constructor.
@@ -237,7 +245,7 @@ abstract class Alg_WC_CPG_Module {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (desc) better desc, e.g. add example: `[alg_wc_cpg_if value1="{alg_wc_cpg_cart_total}" value2="1000" operator="less than"]Monday 00:00:00 - Monday 23:59:59[/alg_wc_cpg_if]`
+	 * @todo    [next] (desc) better desc, e.g., add example: `[alg_wc_cpg_if value1="{alg_wc_cpg_cart_total}" value2="1000" operator="less than"]Monday 00:00:00 - Monday 23:59:59[/alg_wc_cpg_if]`
 	 */
 	function get_shortcode_settings_notes() {
 		return array(
@@ -284,7 +292,7 @@ abstract class Alg_WC_CPG_Module {
 	 *
 	 * @todo    [next] (dev) `get_current_value()`: is it safe to use? add it to the settings descriptions? add formatted `%current%` placeholder?
 	 * @todo    [later] (dev) better default values?
-	 * @todo    [maybe] (dev) shortcodes instead of placeholders, i.e. `[gateway_title]`, `[value]`, `[total]`?
+	 * @todo    [maybe] (dev) shortcodes instead of placeholders, i.e., `[gateway_title]`, `[value]`, `[total]`?
 	 */
 	function get_notice( $submodule, $gateway, $value, $result ) {
 		$notice_template = do_shortcode( $this->get_option( $submodule, 'notice', false, $this->get_default_notice( $submodule ) ) );

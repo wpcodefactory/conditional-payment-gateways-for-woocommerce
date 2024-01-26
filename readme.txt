@@ -1,9 +1,9 @@
 === Conditional Payment Gateways for WooCommerce ===
-Contributors: wpcodefactory, omardabbas, karzin, anbinder, algoritmika, kousikmukherjeeli
+Contributors: wpcodefactory, algoritmika, anbinder
 Tags: woocommerce, payment gateway, woo commerce
 Requires at least: 4.4
-Tested up to: 6.3
-Stable tag: 2.1.3
+Tested up to: 6.4
+Stable tag: 2.2.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,9 +15,9 @@ Manage payment gateways in WooCommerce. Beautifully.
 
 ### &#9989; Available Conditions ###
 
-Plugin includes these **modules** (i.e. "conditions"):
+Plugin includes these **modules** (i.e., "conditions"):
 
-* **Cart total** - Hides WooCommerce payment gateways based on minimum and maximum cart (i.e. order) amounts.
+* **Cart total** - Hides WooCommerce payment gateways based on minimum and maximum cart (i.e., order) amounts.
 * **Date and time** - Hides WooCommerce payment gateways by current date and time.
 * **Customer IP** - Hides WooCommerce payment gateways by current user IP.
 * **User** - Hides WooCommerce payment gateways by current user ID.
@@ -40,6 +40,10 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 * We are open to your suggestions and feedback. Thank you for using or trying out one of our plugins!
 * [Visit plugin site](https://wpfactory.com/item/conditional-payment-gateways-for-woocommerce/).
 
+### &#8505; More ###
+
+* The plugin is **"High-Performance Order Storage (HPOS)"** compatible.
+
 == Installation ==
 
 1. Upload the entire plugin folder to the `/wp-content/plugins/` directory.
@@ -48,7 +52,14 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 
 == Changelog ==
 
-= 2.1.3 - 24/06/2023 =
+= 2.2.0 - 26/01/2024 =
+* Dev – "High-Performance Order Storage (HPOS)" compatibility.
+* Dev - PHP 8.2 compatibility - "Creation of dynamic property is deprecated" notice fixed.
+* Dev - Admin settings descriptions updated.
+* WC tested up to: 8.5.
+* Tested up to: 6.4.
+
+= 2.1.3 - 24/09/2023 =
 * WC tested up to: 8.1.
 * Tested up to: 6.3.
 
@@ -81,8 +92,8 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 * Dev - "Customer IP" module added.
 * Dev - "User" module added.
 * Dev - "Date/Time" module added.
-* Dev - Cart Total - Cart total is calculated with shortcode now. Checkbox options (i.e. "Exclude taxes/shipping/discounts") removed - this is replaced by shortcode attributes now.
-* Dev - Cart Total - Additional notice - Placeholders renamed: `%min_amount%` and `%max_amount%` are now replaced by a single `%value%` placeholder. `%result%` (i.e. current cart total) placeholder added.
+* Dev - Cart Total - Cart total is calculated with shortcode now. Checkbox options (i.e., "Exclude taxes/shipping/discounts") removed - this is replaced by shortcode attributes now.
+* Dev - Cart Total - Additional notice - Placeholders renamed: `%min_amount%` and `%max_amount%` are now replaced by a single `%value%` placeholder. `%result%` (i.e., current cart total) placeholder added.
 * Dev - General - "Leave at least one gateway" option added.
 * Dev - General - "Debug" option added.
 * Dev - Shortcodes - `[alg_wc_cpg_if]` shortcode added.

@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Settings
  *
- * @version 2.1.0
+ * @version 2.2.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -17,7 +17,7 @@ class Alg_WC_CPG_Settings extends WC_Settings_Page {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.0.0
+	 * @version 2.2.0
 	 * @since   2.0.0
 	 */
 	function __construct() {
@@ -28,7 +28,7 @@ class Alg_WC_CPG_Settings extends WC_Settings_Page {
 		require_once( 'class-alg-wc-cpg-settings-section.php' );
 		require_once( 'class-alg-wc-cpg-settings-general.php' );
 		foreach ( alg_wc_cpg()->core->get_modules() as $module ) {
-			$this->sections[ $module->get_id() ] = new Alg_WC_CPG_Settings_Section( $module->get_id(), $module->get_title(), $module );
+			new Alg_WC_CPG_Settings_Section( $module->get_id(), $module->get_title(), $module );
 		}
 	}
 

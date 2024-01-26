@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Main Class
  *
- * @version 2.1.0
+ * @version 2.2.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -21,6 +21,14 @@ final class Alg_WC_CPG {
 	 * @since 2.0.0
 	 */
 	public $version = ALG_WC_CPG_VERSION;
+
+	/**
+	 * core.
+	 *
+	 * @version 2.2.0
+	 * @since   2.2.0
+	 */
+	public $core;
 
 	/**
 	 * @var   Alg_WC_CPG The single instance of the class
@@ -49,7 +57,7 @@ final class Alg_WC_CPG {
 	/**
 	 * Alg_WC_CPG Constructor.
 	 *
-	 * @version 2.1.0
+	 * @version 2.2.0
 	 * @since   2.0.0
 	 *
 	 * @access  public
@@ -63,6 +71,9 @@ final class Alg_WC_CPG {
 
 		// Set up localisation
 		add_action( 'init', array( $this, 'localize' ) );
+
+		// Declare compatibility with custom order tables for WooCommerce
+		add_action( 'before_woocommerce_init', array( $this, 'wc_declare_compatibility' ) );
 
 		// Pro
 		if ( 'conditional-payment-gateways-for-woocommerce-pro.php' === basename( ALG_WC_CPG_FILE ) ) {
@@ -87,6 +98,23 @@ final class Alg_WC_CPG {
 	 */
 	function localize() {
 		load_plugin_textdomain( 'conditional-payment-gateways-for-woocommerce', false, dirname( plugin_basename( ALG_WC_CPG_FILE ) ) . '/langs/' );
+	}
+
+	/**
+	 * wc_declare_compatibility.
+	 *
+	 * @version 2.2.0
+	 * @since   2.2.0
+	 *
+	 * @see     https://github.com/woocommerce/woocommerce/wiki/High-Performance-Order-Storage-Upgrade-Recipe-Book#declaring-extension-incompatibility
+	 */
+	function wc_declare_compatibility() {
+		if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
+			$files = ( defined( 'ALG_WC_CPG_FILE_FREE' ) ? array( ALG_WC_CPG_FILE, ALG_WC_CPG_FILE_FREE ) : array( ALG_WC_CPG_FILE ) );
+			foreach ( $files as $file ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', $file, true );
+			}
+		}
 	}
 
 	/**

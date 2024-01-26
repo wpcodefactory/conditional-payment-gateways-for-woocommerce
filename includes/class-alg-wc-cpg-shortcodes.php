@@ -86,8 +86,8 @@ class Alg_WC_CPG_Shortcodes {
 	 * @since   2.0.0
 	 *
 	 * @todo    [next] (dev) `shortcode_atts`?
-	 * @todo    [next] (feature) more `values`: e.g. `user_role`, `user_ip`, `current_time`, `product_id_in_cart`, `product_cat_in_cart`, etc.
-	 * @todo    [next] (feature) more `operators`: e.g. `in`
+	 * @todo    [next] (feature) more `values`: e.g., `user_role`, `user_ip`, `current_time`, `product_id_in_cart`, `product_cat_in_cart`, etc.
+	 * @todo    [next] (feature) more `operators`: e.g., `in`
 	 * @todo    [maybe] (dev) code refactoring
 	 */
 	function shortcode_if( $atts, $content = '' ) {

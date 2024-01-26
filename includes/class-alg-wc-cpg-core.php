@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Core Class
  *
- * @version 2.1.0
+ * @version 2.2.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -13,6 +13,22 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if ( ! class_exists( 'Alg_WC_CPG_Core' ) ) :
 
 class Alg_WC_CPG_Core {
+
+	/**
+	 * modules.
+	 *
+	 * @version 2.2.0
+	 * @since   2.2.0
+	 */
+	public $modules;
+
+	/**
+	 * do_debug.
+	 *
+	 * @version 2.2.0
+	 * @since   2.2.0
+	 */
+	public $do_debug;
 
 	/**
 	 * Constructor.

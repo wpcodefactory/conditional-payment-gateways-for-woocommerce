@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Module - Date Time
  *
- * @version 2.1.0
+ * @version 2.2.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -69,14 +69,14 @@ class Alg_WC_CPG_Module_Date_Time extends Alg_WC_CPG_Module {
 	/**
 	 * get_settings_notes.
 	 *
-	 * @version 2.0.0
+	 * @version 2.2.0
 	 * @since   2.0.0
 	 *
 	 * @todo    [next] (dev) fix: hyphen is not allowed
 	 */
 	function get_settings_notes() {
 		return array(
-			sprintf( __( 'Options must be set as date range(s) in %s format, i.e. dates must be separated with the hyphen %s symbol.', 'conditional-payment-gateways-for-woocommerce' ),
+			sprintf( __( 'Options must be set as date range(s) in %s format, i.e., dates must be separated with the hyphen %s symbol.', 'conditional-payment-gateways-for-woocommerce' ),
 				'<code>from-to</code>', '<code>-</code>' ),
 			sprintf( __( 'You can add multiple date ranges, one per line (algorithm stops on first matching date range), i.e.: %s', 'conditional-payment-gateways-for-woocommerce' ),
 				'<pre' . $this->get_pre_style() . '>' . implode( PHP_EOL, array( 'from1-to1', 'from2-to2' ) ) . '</pre>' ),
