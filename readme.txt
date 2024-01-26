@@ -1,5 +1,5 @@
 === Conditional Payment Gateways for WooCommerce ===
-Contributors: wpcodefactory, algoritmika, anbinder
+Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmukherjeeli
 Tags: woocommerce, payment gateway, woo commerce
 Requires at least: 4.4
 Tested up to: 6.4
