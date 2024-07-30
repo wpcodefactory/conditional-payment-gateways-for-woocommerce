@@ -1,10 +1,41 @@
-#: includes/class-alg-wc-cpg-core.php:149
-#, php-format
-msgid "[%s > %s] Disabling: %s;"
+# Copyright (C) 2024 WPFactory
+# This file is distributed under the same license as the Conditional Payment Gateways for WooCommerce Pro plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: conditional-payment-gateways-for-woocommerce 2.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/conditional-payment-gateways-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-30T09:15:57+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: conditional-payment-gateways-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+msgid "Conditional Payment Gateways for WooCommerce Pro"
 msgstr ""
 
-#: includes/class-alg-wc-cpg.php:158
-msgid "Settings"
+#. Plugin URI of the plugin
+msgid "https://wpfactory.com/item/conditional-payment-gateways-for-woocommerce/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Manage payment gateways in WooCommerce. Beautifully."
+msgstr ""
+
+#. Author of the plugin
+msgid "WPFactory"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wpfactory.com"
+msgstr ""
+
+#: includes/class-alg-wc-cpg-core.php:149
+msgid "[%s > %s] Disabling: %s;"
 msgstr ""
 
 #: includes/class-alg-wc-cpg.php:161
@@ -20,27 +51,19 @@ msgid "Hides payment gateways based on min/max cart (i.e., order) amounts."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:70
-msgid ""
-"Payment gateway will be hidden if cart total is <strong>below</strong> this "
-"amount."
+msgid "Payment gateway will be hidden if cart total is <strong>below</strong> this amount."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:72
-msgid ""
-"Payment gateway will be hidden if cart total <strong>exceeds</strong> this "
-"amount."
+msgid "Payment gateway will be hidden if cart total <strong>exceeds</strong> this amount."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:105
-msgid ""
-"Minimum amount for \"%gateway_title%\" is %value%. Your cart total is %result"
-"%."
+msgid "Minimum amount for \"%gateway_title%\" is %value%. Your cart total is %result%."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:107
-msgid ""
-"Maximum amount for \"%gateway_title%\" is %value%. Your cart total is %result"
-"%."
+msgid "Maximum amount for \"%gateway_title%\" is %value%. Your cart total is %result%."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:147
@@ -48,9 +71,7 @@ msgid "Cart Total Calculation"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:148
-msgid ""
-"This section sets how cart total should be calculated when comparing it with "
-"min/max amounts."
+msgid "This section sets how cart total should be calculated when comparing it with min/max amounts."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:153
@@ -58,7 +79,6 @@ msgid "Cart total"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:154
-#, php-format
 msgid "You should use %s shortcode here."
 msgstr ""
 
@@ -67,15 +87,11 @@ msgid "If set to zero - option is ignored."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:180
-#, php-format
 msgid "For decimal values use dot %s symbol."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:181
-#, php-format
-msgid ""
-"In \"%s\": %s will output current cart total, and %s will output current "
-"gateway min or max amount."
+msgid "In \"%s\": %s will output current cart total, and %s will output current gateway min or max amount."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:182
@@ -84,7 +100,6 @@ msgid "Additional notice"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:209
-#, php-format
 msgid "[%s] Value: %s; Current: %s;"
 msgstr ""
 
@@ -93,9 +108,7 @@ msgid "Currency"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-currency.php:56
-msgid ""
-"Hides payment gateways by the current currency. For example, this is useful, "
-"if you are using some additional currency switcher plugin."
+msgid "Hides payment gateways by the current currency. For example, this is useful, if you are using some additional currency switcher plugin."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-currency.php:66
@@ -104,10 +117,7 @@ msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-currency.php:77
 #: includes/modules/class-alg-wc-cpg-module-language.php:82
-#, php-format
-msgid ""
-"You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the "
-"\"Additional notice\" values."
+msgid "You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the \"Additional notice\" values."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-currency.php:130
@@ -133,7 +143,6 @@ msgid "\"%gateway_title%\" is not available for your IP address."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-customer-ip.php:77
-#, php-format
 msgid "Options must be set as list of IPs, one IP per line, e.g.: %s"
 msgstr ""
 
@@ -150,83 +159,59 @@ msgid "Currently \"%gateway_title%\" is not available."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:79
-#, php-format
-msgid ""
-"Options must be set as date range(s) in %s format, i.e., dates must be "
-"separated with the hyphen %s symbol."
+msgid "Options must be set as date range(s) in %s format, i.e., dates must be separated with the hyphen %s symbol."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:81
-#, php-format
-msgid ""
-"You can add multiple date ranges, one per line (algorithm stops on first "
-"matching date range), i.e.: %s"
+msgid "You can add multiple date ranges, one per line (algorithm stops on first matching date range), i.e.: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:83
-#, php-format
-msgid ""
-"Dates can be set in any format parsed by the PHP %s function, except you "
-"can't use hyphen %s symbol, as it's reserved for separating %s and %s values."
+msgid "Dates can be set in any format parsed by the PHP %s function, except you can't use hyphen %s symbol, as it's reserved for separating %s and %s values."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:85
-#, php-format
 msgid "Current date: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:100
-#, php-format
 msgid "Enable payment gateway only before 3:00 PM each day: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:102
-#, php-format
-msgid ""
-"Enable payment gateway only before 3:00 PM each day, or before 5:00 PM on "
-"Mondays: %s"
+msgid "Enable payment gateway only before 3:00 PM each day, or before 5:00 PM on Mondays: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:104
-#, php-format
 msgid "Enable payment gateway for the summer months only: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:106
-#, php-format
 msgid "Enable payment gateway for the February only: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:111
-#, php-format
 msgid "Disable payment gateway each day after 4:00 PM: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:113
-#, php-format
-msgid ""
-"Disable payment gateway each day after 4:00 PM, and for the whole day on "
-"weekends: %s"
+msgid "Disable payment gateway each day after 4:00 PM, and for the whole day on weekends: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:115
-#, php-format
 msgid "Disable payment gateway for the summer months: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:117
-#, php-format
 msgid "Disable payment gateway for the February: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:152
-#, php-format
 msgid "from %s to %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:153
 #: includes/modules/classes/class-alg-wc-cpg-module.php:70
-#, php-format
 msgid "[%s] Value: %s; Current: %s; Result: %s;"
 msgstr ""
 
@@ -243,7 +228,6 @@ msgid "WPML or Polylang plugin is disabled."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-language.php:59
-#, php-format
 msgid "Hides payment gateways by the current %s or %s language."
 msgstr ""
 
@@ -264,40 +248,31 @@ msgid "\"%gateway_title%\" is not available for the current user."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-user.php:77
-#, php-format
 msgid "Options must be set as list of user IDs, one per line, e.g.: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-user.php:79
-#, php-format
 msgid "For guests, i.e., not logged in users, use %s (zero)."
 msgstr ""
 
 #: includes/modules/classes/class-alg-wc-cpg-module.php:177
-#, php-format
 msgid "Require %s"
 msgstr ""
 
 #: includes/modules/classes/class-alg-wc-cpg-module.php:180
-#, php-format
 msgid "Exclude %s"
 msgstr ""
 
 #: includes/modules/classes/class-alg-wc-cpg-module.php:183
-#, php-format
 msgid "Minimum %s"
 msgstr ""
 
 #: includes/modules/classes/class-alg-wc-cpg-module.php:186
-#, php-format
 msgid "Maximum %s"
 msgstr ""
 
 #: includes/modules/classes/class-alg-wc-cpg-module.php:252
-#, php-format
-msgid ""
-"You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the "
-"values."
+msgid "You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the values."
 msgstr ""
 
 #: includes/settings/class-alg-wc-cpg-settings-general.php:47
@@ -324,7 +299,6 @@ msgid "Enable"
 msgstr ""
 
 #: includes/settings/class-alg-wc-cpg-settings-general.php:61
-#, php-format
 msgid "Will add a log to %s."
 msgstr ""
 
@@ -337,9 +311,7 @@ msgid "Leave at least one gateway"
 msgstr ""
 
 #: includes/settings/class-alg-wc-cpg-settings-general.php:70
-msgid ""
-"Will ensure that when all payment gateways do not match \"enabled\" "
-"criteria, one last remaining gateway will still remain active in any case."
+msgid "Will ensure that when all payment gateways do not match \"enabled\" criteria, one last remaining gateway will still remain active in any case."
 msgstr ""
 
 #: includes/settings/class-alg-wc-cpg-settings-general.php:76
@@ -383,13 +355,10 @@ msgid "Enable section"
 msgstr ""
 
 #: includes/settings/class-alg-wc-cpg-settings-section.php:155
-msgid ""
-"In addition to hiding a gateway, you can also add extra notice on the "
-"checkout page."
+msgid "In addition to hiding a gateway, you can also add extra notice on the checkout page."
 msgstr ""
 
 #: includes/settings/class-alg-wc-cpg-settings-section.php:161
-#, php-format
 msgid "Available placeholder(s): %s."
 msgstr ""
 
@@ -406,7 +375,6 @@ msgid "Notes & Examples"
 msgstr ""
 
 #: includes/settings/class-alg-wc-cpg-settings-section.php:188
-#, php-format
 msgid "Examples: %s"
 msgstr ""
 
