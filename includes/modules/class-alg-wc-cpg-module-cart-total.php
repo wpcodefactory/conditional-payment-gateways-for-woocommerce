@@ -50,7 +50,7 @@ class Alg_WC_CPG_Module_Cart_Total extends Alg_WC_CPG_Module {
 	 * @version 2.2.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (desc) better desc?
+	 * @todo    (desc) better desc?
 	 */
 	function get_desc() {
 		return __( 'Hides payment gateways based on min/max cart (i.e., order) amounts.', 'conditional-payment-gateways-for-woocommerce' );
@@ -62,7 +62,7 @@ class Alg_WC_CPG_Module_Cart_Total extends Alg_WC_CPG_Module {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (desc) better desc?
+	 * @todo    (desc) better desc?
 	 */
 	function get_submodule_desc( $submodule ) {
 		switch ( $submodule ) {
@@ -114,9 +114,9 @@ class Alg_WC_CPG_Module_Cart_Total extends Alg_WC_CPG_Module {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (feature) add: `%diff_amount%`
-	 * @todo    [next] (dev) aliases: `%cart_total%`, `%amount%`?
-	 * @todo    [next] (dev) check: `wc_has_notice()` shouldn't work with `%result%`? if so, then maybe this can be solved with `wc_clear_notices()`?
+	 * @todo    (feature) add: `%diff_amount%`
+	 * @todo    (dev) aliases: `%cart_total%`, `%amount%`?
+	 * @todo    (dev) check: `wc_has_notice()` shouldn't work with `%result%`? if so, then maybe this can be solved with `wc_clear_notices()`?
 	 */
 	function get_notice_placeholders() {
 		return array( '%gateway_title%', '%value%', '%result%' );
@@ -138,8 +138,8 @@ class Alg_WC_CPG_Module_Cart_Total extends Alg_WC_CPG_Module {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (desc) `alg_wc_cpg_cart_total_calc`: add link to shortcode description on wpfactory.com
-	 * @todo    [next] (dev) `alg_wc_cpg_cart_total_calc`: better default value?
+	 * @todo    (desc) `alg_wc_cpg_cart_total_calc`: add link to shortcode description on wpfactory.com
+	 * @todo    (dev) `alg_wc_cpg_cart_total_calc`: better default value?
 	 */
 	function get_extra_settings() {
 		return array(
@@ -171,8 +171,8 @@ class Alg_WC_CPG_Module_Cart_Total extends Alg_WC_CPG_Module {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (desc) better desc
-	 * @todo    [next] (dev) fix: use dot symbol
+	 * @todo    (desc) better desc
+	 * @todo    (dev) fix: use dot symbol
 	 */
 	function get_settings_notes() {
 		return array(

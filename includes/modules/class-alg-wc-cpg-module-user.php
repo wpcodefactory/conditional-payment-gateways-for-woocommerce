@@ -50,7 +50,7 @@ class Alg_WC_CPG_Module_User extends Alg_WC_CPG_Module {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (desc) better desc?
+	 * @todo    (desc) better desc?
 	 */
 	function get_desc() {
 		return __( 'Hides payment gateways by current user ID.', 'conditional-payment-gateways-for-woocommerce' );
@@ -87,8 +87,8 @@ class Alg_WC_CPG_Module_User extends Alg_WC_CPG_Module {
 	 * @version 2.1.0
 	 * @since   2.1.0
 	 *
-	 * @todo    [next] (feature) user *email*
-	 * @todo    [next] (feature) ranges and/or wildcards
+	 * @todo    (feature) user *email*
+	 * @todo    (feature) ranges and/or wildcards
 	 */
 	function get_current_value() {
 		if ( ! isset( $this->current_value ) ) {

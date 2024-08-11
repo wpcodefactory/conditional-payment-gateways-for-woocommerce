@@ -43,9 +43,9 @@ class Alg_WC_CPG_Shortcodes {
 	 * @version 2.0.1
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (feature) incl/excl products (including variations), product categories/tags
-	 * @todo    [next] (feature) subtotal
-	 * @todo    [next] (feature) fees
+	 * @todo    (feature) incl/excl products (including variations), product categories/tags
+	 * @todo    (feature) subtotal
+	 * @todo    (feature) fees
 	 */
 	function shortcode_cart_total( $atts, $content = '' ) {
 		if ( ! function_exists( 'WC' ) || ! isset( WC()->cart ) ) {
@@ -85,10 +85,10 @@ class Alg_WC_CPG_Shortcodes {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (dev) `shortcode_atts`?
-	 * @todo    [next] (feature) more `values`: e.g., `user_role`, `user_ip`, `current_time`, `product_id_in_cart`, `product_cat_in_cart`, etc.
-	 * @todo    [next] (feature) more `operators`: e.g., `in`
-	 * @todo    [maybe] (dev) code refactoring
+	 * @todo    (dev) `shortcode_atts`?
+	 * @todo    (feature) more `values`: e.g., `user_role`, `user_ip`, `current_time`, `product_id_in_cart`, `product_cat_in_cart`, etc.
+	 * @todo    (feature) more `operators`: e.g., `in`
+	 * @todo    (dev) code refactoring
 	 */
 	function shortcode_if( $atts, $content = '' ) {
 		if ( ! isset( $atts['value1'] ) || ! isset( $atts['value2'] ) || ! isset( $atts['operator'] ) ) {

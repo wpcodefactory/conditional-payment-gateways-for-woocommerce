@@ -36,7 +36,7 @@ class Alg_WC_CPG_Core {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (feature) optional "After checkout validation" (only or both)
+	 * @todo    (feature) optional "After checkout validation" (only or both)
 	 */
 	function __construct() {
 		if ( 'yes' === get_option( 'alg_wc_cpg_plugin_enabled', 'yes' ) ) {
@@ -111,8 +111,8 @@ class Alg_WC_CPG_Core {
 	 * @version 2.1.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [maybe] (dev) notices: `wc_clear_notices()`?
-	 * @todo    [maybe] (dev) notices: `wp_doing_ajax()`?
+	 * @todo    (dev) notices: `wc_clear_notices()`?
+	 * @todo    (dev) notices: `wp_doing_ajax()`?
 	 */
 	function available_payment_gateways( $available_gateways ) {
 		$notices = array();

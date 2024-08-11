@@ -50,7 +50,7 @@ class Alg_WC_CPG_Module_Currency extends Alg_WC_CPG_Module {
 	 * @version 2.1.0
 	 * @since   2.1.0
 	 *
-	 * @todo    [next] (desc) better desc?
+	 * @todo    (desc) better desc?
 	 */
 	function get_desc() {
 		return __( 'Hides payment gateways by the current currency. For example, this is useful, if you are using some additional currency switcher plugin.', 'conditional-payment-gateways-for-woocommerce' );

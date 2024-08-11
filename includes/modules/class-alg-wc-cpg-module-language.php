@@ -50,7 +50,7 @@ class Alg_WC_CPG_Module_Language extends Alg_WC_CPG_Module {
 	 * @version 2.1.0
 	 * @since   2.1.0
 	 *
-	 * @todo    [next] (dev) WPML/Polylang active/disabled: as an admin notice?
+	 * @todo    (dev) WPML/Polylang active/disabled: as an admin notice?
 	 */
 	function get_desc() {
 		$desc_is_wpml_or_polylang_active = ( function_exists( 'icl_get_languages' ) ?
@@ -142,7 +142,7 @@ class Alg_WC_CPG_Module_Language extends Alg_WC_CPG_Module {
 	 * @version 2.1.0
 	 * @since   2.1.0
 	 *
-	 * @todo    [later] (dev) rethink `LANG_NA`?
+	 * @todo    (dev) rethink `LANG_NA`?
 	 */
 	function get_current_value() {
 		if ( ! isset( $this->current_value ) ) {

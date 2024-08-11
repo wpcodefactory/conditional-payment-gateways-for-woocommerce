@@ -50,7 +50,7 @@ class Alg_WC_CPG_Module_Date_Time extends Alg_WC_CPG_Module {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (desc) better desc?
+	 * @todo    (desc) better desc?
 	 */
 	function get_desc() {
 		return __( 'Hides payment gateways by current date and time.', 'conditional-payment-gateways-for-woocommerce' );
@@ -72,7 +72,7 @@ class Alg_WC_CPG_Module_Date_Time extends Alg_WC_CPG_Module {
 	 * @version 2.2.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (dev) fix: hyphen is not allowed
+	 * @todo    (dev) fix: hyphen is not allowed
 	 */
 	function get_settings_notes() {
 		return array(

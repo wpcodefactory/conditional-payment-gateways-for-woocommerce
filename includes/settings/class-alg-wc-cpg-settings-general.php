@@ -36,7 +36,7 @@ class Alg_WC_CPG_Settings_General extends Alg_WC_CPG_Settings_Section {
 	 * @version 2.1.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (desc) `alg_wc_cpg_leave_at_least_one_gateway`: better desc?
+	 * @todo    (desc) `alg_wc_cpg_leave_at_least_one_gateway`: better desc?
 	 */
 	function get_settings() {
 

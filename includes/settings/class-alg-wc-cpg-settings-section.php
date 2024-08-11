@@ -69,8 +69,8 @@ class Alg_WC_CPG_Settings_Section {
 	 * @version 2.1.0
 	 * @since   2.1.0
 	 *
-	 * @todo    [next] (dev) move this to a separate js file
-	 * @todo    [next] (dev) load on needed pages only
+	 * @todo    (dev) move this to a separate js file
+	 * @todo    (dev) load on needed pages only
 	 */
 	function add_admin_script() {
 		?><script>
@@ -95,7 +95,7 @@ class Alg_WC_CPG_Settings_Section {
 	 * @version 2.1.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [later] (dev) `notice`: `alg_wc_cpg_raw`?
+	 * @todo    (dev) `notice`: `alg_wc_cpg_raw`?
 	 */
 	function get_settings() {
 
