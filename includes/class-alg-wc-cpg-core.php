@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Core Class
  *
- * @version 2.2.0
+ * @version 2.3.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -51,7 +51,7 @@ class Alg_WC_CPG_Core {
 	/**
 	 * get_modules.
 	 *
-	 * @version 2.1.0
+	 * @version 2.3.0
 	 * @since   2.0.0
 	 */
 	function get_modules() {
@@ -61,8 +61,11 @@ class Alg_WC_CPG_Core {
 				require_once( 'modules/class-alg-wc-cpg-module-date-time.php' ),
 				require_once( 'modules/class-alg-wc-cpg-module-customer-ip.php' ),
 				require_once( 'modules/class-alg-wc-cpg-module-user.php' ),
+				require_once( 'modules/class-alg-wc-cpg-module-user-role.php' ),
 				require_once( 'modules/class-alg-wc-cpg-module-cart-total.php' ),
 				require_once( 'modules/class-alg-wc-cpg-module-currency.php' ),
+				require_once( 'modules/class-alg-wc-cpg-module-country.php' ),
+				require_once( 'modules/class-alg-wc-cpg-module-product-title.php' ),
 				require_once( 'modules/class-alg-wc-cpg-module-language.php' ),
 			);
 			uasort( $this->modules, array( $this, 'sort_modules_by_priority' ) );

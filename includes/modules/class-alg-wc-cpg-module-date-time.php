@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Module - Date Time
  *
- * @version 2.2.0
+ * @version 2.3.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -27,11 +27,11 @@ class Alg_WC_CPG_Module_Date_Time extends Alg_WC_CPG_Module {
 	/**
 	 * get_default_priority.
 	 *
-	 * @version 2.0.0
+	 * @version 2.3.0
 	 * @since   2.0.0
 	 */
 	function get_default_priority() {
-		return 10;
+		return 100;
 	}
 
 	/**

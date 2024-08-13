@@ -1,9 +1,10 @@
-#: includes/class-alg-wc-cpg-core.php:149
+#: includes/class-alg-wc-cpg-core.php:152
 #, php-format
 msgid "[%s > %s] Disabling: %s;"
 msgstr ""
 
 #: includes/class-alg-wc-cpg.php:158
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:118
 msgid "Settings"
 msgstr ""
 
@@ -88,6 +89,64 @@ msgstr ""
 msgid "[%s] Value: %s; Current: %s;"
 msgstr ""
 
+#: includes/modules/class-alg-wc-cpg-module-country.php:44
+msgid "Country"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:54
+msgid ""
+"Hides payment gateways by current user country (by IP, billing or shipping "
+"country)."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:64
+msgid "\"%gateway_title%\" is not available for your country."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:75
+#: includes/modules/class-alg-wc-cpg-module-currency.php:77
+#: includes/modules/class-alg-wc-cpg-module-language.php:82
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:91
+#, php-format
+msgid ""
+"You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the "
+"\"Additional notice\" values."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:130
+#: includes/modules/class-alg-wc-cpg-module-currency.php:130
+#: includes/modules/class-alg-wc-cpg-module-language.php:135
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:145
+msgid "Select all"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:131
+#: includes/modules/class-alg-wc-cpg-module-currency.php:131
+#: includes/modules/class-alg-wc-cpg-module-language.php:136
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:146
+msgid "Deselect all"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:143
+msgid "Country Detection"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:148
+msgid "Country detection"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:154
+msgid "Country by IP (geolocation)"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:155
+msgid "Billing country"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-country.php:156
+msgid "Shipping country"
+msgstr ""
+
 #: includes/modules/class-alg-wc-cpg-module-currency.php:44
 msgid "Currency"
 msgstr ""
@@ -102,30 +161,14 @@ msgstr ""
 msgid "\"%gateway_title%\" is not available for the current currency."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:77
-#: includes/modules/class-alg-wc-cpg-module-language.php:82
-#, php-format
-msgid ""
-"You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the "
-"\"Additional notice\" values."
-msgstr ""
-
-#: includes/modules/class-alg-wc-cpg-module-currency.php:130
-#: includes/modules/class-alg-wc-cpg-module-language.php:135
-msgid "Select all"
-msgstr ""
-
-#: includes/modules/class-alg-wc-cpg-module-currency.php:131
-#: includes/modules/class-alg-wc-cpg-module-language.php:136
-msgid "Deselect all"
-msgstr ""
-
 #: includes/modules/class-alg-wc-cpg-module-customer-ip.php:34
 msgid "Customer IP"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-customer-ip.php:51
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:153
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:50
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:37
 #: includes/modules/classes/class-alg-wc-cpg-module.php:70
 #, php-format
 msgid "[%s] Value: %s; Current: %s; Result: %s;"
@@ -139,11 +182,11 @@ msgstr ""
 msgid "\"%gateway_title%\" is not available for your IP address."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:127
+#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:129
 #, php-format
 msgid ""
-"Options must be set as list of IPs, one IP per line, accepts CIDR ranges, e."
-"g.: %s"
+"Options must be set as a list of IPs, one IP per line, accepts CIDR ranges, "
+"e.g.: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:44
@@ -254,6 +297,64 @@ msgstr ""
 msgid "\"%gateway_title%\" is not available for the current language."
 msgstr ""
 
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:73
+msgid "Product Title"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:83
+msgid "Hides payment gateways by cart product titles (or descriptions)."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:93
+msgid "\"%gateway_title%\" is not available for the cart products."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:104
+#, php-format
+msgid "Options must be set as a list of strings, one string per line, e.g.: %s"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:123
+msgid "Product data"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:129
+msgid "Product title"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:130
+msgid "Product description"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:131
+msgid "Product short description"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:135
+msgid "Comparison function"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:141
+msgid "Case-sensitive"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:142
+msgid "Case-insensitive"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:60
+msgid "User Role"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:70
+msgid "Hides payment gateways by current user role."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:80
+#: includes/modules/class-alg-wc-cpg-module-user.php:66
+msgid "\"%gateway_title%\" is not available for the current user."
+msgstr ""
+
 #: includes/modules/class-alg-wc-cpg-module-user.php:44
 msgid "User"
 msgstr ""
@@ -262,13 +363,9 @@ msgstr ""
 msgid "Hides payment gateways by current user ID."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-user.php:66
-msgid "\"%gateway_title%\" is not available for the current user."
-msgstr ""
-
 #: includes/modules/class-alg-wc-cpg-module-user.php:77
 #, php-format
-msgid "Options must be set as list of user IDs, one per line, e.g.: %s"
+msgid "Options must be set as a list of user IDs, one per line, e.g.: %s"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-user.php:79

@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Module - Customer IP
  *
- * @version 2.2.2
+ * @version 2.3.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -87,11 +87,11 @@ class Alg_WC_CPG_Module_Customer_IP extends Alg_WC_CPG_Module {
 	/**
 	 * get_default_priority.
 	 *
-	 * @version 2.0.0
+	 * @version 2.3.0
 	 * @since   2.0.0
 	 */
 	function get_default_priority() {
-		return 20;
+		return 200;
 	}
 
 	/**
@@ -119,12 +119,14 @@ class Alg_WC_CPG_Module_Customer_IP extends Alg_WC_CPG_Module {
 	/**
 	 * get_settings_notes.
 	 *
-	 * @version 2.2.2
+	 * @version 2.3.0
 	 * @since   2.0.0
+	 *
+	 * @todo    (desc) CIDR: add link to https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
 	 */
 	function get_settings_notes() {
 		return array(
-			sprintf( __( 'Options must be set as list of IPs, one IP per line, accepts CIDR ranges, e.g.: %s', 'conditional-payment-gateways-for-woocommerce' ),
+			sprintf( __( 'Options must be set as a list of IPs, one IP per line, accepts CIDR ranges, e.g.: %s', 'conditional-payment-gateways-for-woocommerce' ),
 				'<pre' . $this->get_pre_style() . '>' . implode( PHP_EOL, array( '127.0.0.1', '172.16.0.9', '192.0.0.7', '10.0.0.0/8' ) ) . '</pre>' ),
 		);
 	}

@@ -3,7 +3,7 @@ Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmu
 Tags: woocommerce, payment gateway, woo commerce
 Requires at least: 4.4
 Tested up to: 6.6
-Stable tag: 2.2.2
+Stable tag: 2.3.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,8 +21,11 @@ Plugin includes these **modules** (i.e., "conditions"):
 * **Date and time** - Hides WooCommerce payment gateways by current date and time.
 * **Customer IP** - Hides WooCommerce payment gateways by current user IP.
 * **User** - Hides WooCommerce payment gateways by current user ID.
+* **User Role** - Hides WooCommerce payment gateways by current user role.
 * **Language** - Hides WooCommerce payment gateways by the current WPML or Polylang language.
 * **Currency** - Hides WooCommerce payment gateways by the current currency. For example, this is useful, if you are using some additional currency switcher plugin.
+* **Country** - Hides WooCommerce payment gateways by the current user country (by IP, billing or shipping country).
+* **Product Title** - Hides WooCommerce payment gateways by cart product titles (or descriptions).
 
 ### &#127942; Premium Version ###
 
@@ -52,14 +55,21 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 
 == Changelog ==
 
+= 2.3.0 - 13/08/2024 =
+* Dev - "User Role" module added.
+* Dev - "Country" module added.
+* Dev - "Product Title" module added.
+* Dev - Default module priorities updated.
+* Dev - Admin settings descriptions updated.
+
 = 2.2.2 - 11/08/2024 =
 * Dev - Customer IP - Now accepts CIDR ranges.
 * Tested up to: 6.6.
-* WooCommerce added to the "Requires Plugins" (plugin header).
 
 = 2.2.1 - 30/07/2024 =
 * WC tested up to: 9.1.
 * Tested up to: 6.5.
+* WooCommerce added to the "Requires Plugins" (plugin header).
 
 = 2.2.0 - 26/01/2024 =
 * Dev – "High-Performance Order Storage (HPOS)" compatibility.

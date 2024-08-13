@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Module
  *
- * @version 2.2.0
+ * @version 2.3.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -287,22 +287,23 @@ abstract class Alg_WC_CPG_Module {
 	/**
 	 * get_notice.
 	 *
-	 * @version 2.1.0
+	 * @version 2.3.0
 	 * @since   2.0.0
 	 *
-	 * @todo    (dev) `get_current_value()`: is it safe to use? add it to the settings descriptions? add formatted `%current%` placeholder?
+	 * @todo    (dev) `get_current_value()`: add it to the settings descriptions? add formatted `%current%` placeholder?
 	 * @todo    (dev) better default values?
 	 * @todo    (dev) shortcodes instead of placeholders, i.e., `[gateway_title]`, `[value]`, `[total]`?
 	 */
 	function get_notice( $submodule, $gateway, $value, $result ) {
 		$notice_template = do_shortcode( $this->get_option( $submodule, 'notice', false, $this->get_default_notice( $submodule ) ) );
+		$current_value   = $this->get_current_value();
 		$placeholders    = array(
 			'%gateway_title%' => $gateway->title,
 			'%value%'         => $this->format_notice_value( $value ),
 			'%result%'        => $this->format_notice_value( $result ),
 			'%raw_value%'     => $value,
 			'%raw_result%'    => $result,
-			'%current_raw%'   => $this->get_current_value(),
+			'%current_raw%'   => ( is_array( $current_value ) ? implode( ', ', $current_value ) : $current_value ),
 		);
 		return str_replace( array_keys( $placeholders ), $placeholders, $notice_template );
 	}
