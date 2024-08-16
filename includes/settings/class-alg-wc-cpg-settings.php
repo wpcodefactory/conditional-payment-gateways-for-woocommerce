@@ -21,15 +21,18 @@ class Alg_WC_CPG_Settings extends WC_Settings_Page {
 	 * @since   2.0.0
 	 */
 	function __construct() {
+
 		$this->id    = 'alg_wc_cpg';
 		$this->label = __( 'Conditional Payment Gateways', 'conditional-payment-gateways-for-woocommerce' );
 		parent::__construct();
+
 		// Sections
 		require_once( 'class-alg-wc-cpg-settings-section.php' );
 		require_once( 'class-alg-wc-cpg-settings-general.php' );
 		foreach ( alg_wc_cpg()->core->get_modules() as $module ) {
 			new Alg_WC_CPG_Settings_Section( $module->get_id(), $module->get_title(), $module );
 		}
+
 	}
 
 	/**

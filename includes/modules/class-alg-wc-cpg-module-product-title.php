@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Module - Product Title
  *
- * @version 2.3.0
+ * @version 2.4.0
  * @since   2.3.0
  *
  * @author  Algoritmika Ltd
@@ -56,11 +56,11 @@ class Alg_WC_CPG_Module_User_Product_Title extends Alg_WC_CPG_Module {
 	/**
 	 * get_default_priority.
 	 *
-	 * @version 2.3.0
+	 * @version 2.4.0
 	 * @since   2.3.0
 	 */
 	function get_default_priority() {
-		return 800;
+		return 1300;
 	}
 
 	/**

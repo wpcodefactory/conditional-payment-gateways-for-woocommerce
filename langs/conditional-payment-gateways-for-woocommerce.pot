@@ -1,9 +1,10 @@
-#: includes/class-alg-wc-cpg-core.php:152
+#: includes/class-alg-wc-cpg-core.php:159
 #, php-format
 msgid "[%s > %s] Disabling: %s;"
 msgstr ""
 
 #: includes/class-alg-wc-cpg.php:158
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:170
 #: includes/modules/class-alg-wc-cpg-module-product-title.php:118
 msgid "Settings"
 msgstr ""
@@ -106,6 +107,11 @@ msgstr ""
 #: includes/modules/class-alg-wc-cpg-module-country.php:75
 #: includes/modules/class-alg-wc-cpg-module-currency.php:77
 #: includes/modules/class-alg-wc-cpg-module-language.php:82
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:91
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:91
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:91
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:92
+#: includes/modules/class-alg-wc-cpg-module-product.php:102
 #: includes/modules/class-alg-wc-cpg-module-user-role.php:91
 #, php-format
 msgid ""
@@ -116,6 +122,10 @@ msgstr ""
 #: includes/modules/class-alg-wc-cpg-module-country.php:130
 #: includes/modules/class-alg-wc-cpg-module-currency.php:130
 #: includes/modules/class-alg-wc-cpg-module-language.php:135
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:149
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:151
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:151
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:153
 #: includes/modules/class-alg-wc-cpg-module-user-role.php:145
 msgid "Select all"
 msgstr ""
@@ -123,6 +133,10 @@ msgstr ""
 #: includes/modules/class-alg-wc-cpg-module-country.php:131
 #: includes/modules/class-alg-wc-cpg-module-currency.php:131
 #: includes/modules/class-alg-wc-cpg-module-language.php:136
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:150
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:152
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:152
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:154
 #: includes/modules/class-alg-wc-cpg-module-user-role.php:146
 msgid "Deselect all"
 msgstr ""
@@ -167,7 +181,12 @@ msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-customer-ip.php:51
 #: includes/modules/class-alg-wc-cpg-module-date-time.php:153
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:37
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:37
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:37
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:37
 #: includes/modules/class-alg-wc-cpg-module-product-title.php:50
+#: includes/modules/class-alg-wc-cpg-module-product.php:48
 #: includes/modules/class-alg-wc-cpg-module-user-role.php:37
 #: includes/modules/classes/class-alg-wc-cpg-module.php:70
 #, php-format
@@ -297,16 +316,67 @@ msgstr ""
 msgid "\"%gateway_title%\" is not available for the current language."
 msgstr ""
 
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:60
+msgid "Product Category"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:70
+msgid "Hides payment gateways by cart product categories."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:80
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:80
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:80
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:81
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:93
+#: includes/modules/class-alg-wc-cpg-module-product.php:91
+msgid "\"%gateway_title%\" is not available for the cart products."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:60
+msgid "Product Shipping Class"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:70
+msgid "Hides payment gateways by cart product shipping classes."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:60
+msgid "Product Tag"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:70
+msgid "Hides payment gateways by cart product tags."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:60
+msgid "Product Taxonomy"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:70
+msgid "Hides payment gateways by cart product custom taxonomy, e.g., brands."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:71
+msgid ""
+"Start by setting the \"Taxonomy slug\" option at the bottom of the page."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:175
+msgid "Taxonomy slug"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:176
+#, php-format
+msgid "E.g., %s."
+msgstr ""
+
 #: includes/modules/class-alg-wc-cpg-module-product-title.php:73
 msgid "Product Title"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-product-title.php:83
 msgid "Hides payment gateways by cart product titles (or descriptions)."
-msgstr ""
-
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:93
-msgid "\"%gateway_title%\" is not available for the cart products."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-product-title.php:104
@@ -340,6 +410,23 @@ msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-product-title.php:142
 msgid "Case-insensitive"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product.php:71
+msgid "Product"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product.php:81
+msgid "Hides payment gateways by cart products."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product.php:141
+#, php-format
+msgid "Product #%d"
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-product.php:150
+msgid "Search for a product&hellip;"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-user-role.php:60
@@ -405,7 +492,7 @@ msgid "Conditional Payment Gateways Options"
 msgstr ""
 
 #: includes/settings/class-alg-wc-cpg-settings-general.php:52
-#: includes/settings/class-alg-wc-cpg-settings.php:25
+#: includes/settings/class-alg-wc-cpg-settings.php:26
 msgid "Conditional Payment Gateways"
 msgstr ""
 
@@ -510,23 +597,23 @@ msgstr ""
 msgid "Examples: %s"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:45
+#: includes/settings/class-alg-wc-cpg-settings.php:48
 msgid "Reset Settings"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:50
+#: includes/settings/class-alg-wc-cpg-settings.php:53
 msgid "Reset section settings"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:51
+#: includes/settings/class-alg-wc-cpg-settings.php:54
 msgid "Reset"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:52
+#: includes/settings/class-alg-wc-cpg-settings.php:55
 msgid "Check the box and save changes to reset."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:80
-#: includes/settings/class-alg-wc-cpg-settings.php:95
+#: includes/settings/class-alg-wc-cpg-settings.php:83
+#: includes/settings/class-alg-wc-cpg-settings.php:98
 msgid "Your settings have been reset."
 msgstr ""

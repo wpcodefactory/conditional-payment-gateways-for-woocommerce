@@ -3,7 +3,7 @@ Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmu
 Tags: woocommerce, payment gateway, woo commerce
 Requires at least: 4.4
 Tested up to: 6.6
-Stable tag: 2.3.0
+Stable tag: 2.4.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -25,6 +25,11 @@ Plugin includes these **modules** (i.e., "conditions"):
 * **Language** - Hides WooCommerce payment gateways by the current WPML or Polylang language.
 * **Currency** - Hides WooCommerce payment gateways by the current currency. For example, this is useful, if you are using some additional currency switcher plugin.
 * **Country** - Hides WooCommerce payment gateways by the current user country (by IP, billing or shipping country).
+* **Product** - Hides WooCommerce payment gateways by cart products.
+* **Product Category** - Hides WooCommerce payment gateways by cart product categories.
+* **Product Tag** - Hides WooCommerce payment gateways by cart product tags.
+* **Product Shipping Class** - Hides WooCommerce payment gateways by cart product shipping classes.
+* **Product Taxonomy** - Hides WooCommerce payment gateways by cart product custom taxonomy, e.g., brands.
 * **Product Title** - Hides WooCommerce payment gateways by cart product titles (or descriptions).
 
 ### &#127942; Premium Version ###
@@ -54,6 +59,16 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 3. Start by visiting plugin settings at "WooCommerce > Settings > Conditional Payment Gateways".
 
 == Changelog ==
+
+= 2.4.0 - 16/08/2024 =
+* Dev - "Product" module added.
+* Dev - "Product Category" module added.
+* Dev - "Product Tag" module added.
+* Dev - "Product Shipping Class" module added.
+* Dev - "Product Taxonomy" module added.
+* Dev - Default module priorities updated.
+* Dev - Admin settings restyled.
+* Dev - Developers - `alg_wc_cpg_gateway_settings_{$module_id}` filter added.
 
 = 2.3.0 - 13/08/2024 =
 * Dev - "User Role" module added.

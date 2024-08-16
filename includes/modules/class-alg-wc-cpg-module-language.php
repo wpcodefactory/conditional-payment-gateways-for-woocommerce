@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Module - Language
  *
- * @version 2.3.0
+ * @version 2.4.0
  * @since   2.1.0
  *
  * @author  Algoritmika Ltd
@@ -27,11 +27,11 @@ class Alg_WC_CPG_Module_Language extends Alg_WC_CPG_Module {
 	/**
 	 * get_default_priority.
 	 *
-	 * @version 2.3.0
+	 * @version 2.4.0
 	 * @since   2.1.0
 	 */
 	function get_default_priority() {
-		return 900;
+		return 1400;
 	}
 
 	/**
