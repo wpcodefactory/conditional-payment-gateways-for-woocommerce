@@ -2,13 +2,13 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Core Class
  *
- * @version 2.4.0
+ * @version 2.5.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CPG_Core' ) ) :
 
@@ -33,7 +33,7 @@ class Alg_WC_CPG_Core {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.0.0
+	 * @version 2.5.0
 	 * @since   2.0.0
 	 *
 	 * @todo    (feature) optional "After checkout validation" (only or both)
@@ -41,7 +41,7 @@ class Alg_WC_CPG_Core {
 	function __construct() {
 		if ( 'yes' === get_option( 'alg_wc_cpg_plugin_enabled', 'yes' ) ) {
 			$this->do_debug = ( 'yes' === get_option( 'alg_wc_cpg_debug_enabled', 'no' ) );
-			require_once( 'class-alg-wc-cpg-shortcodes.php' );
+			require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-cpg-shortcodes.php';
 			add_filter( 'woocommerce_available_payment_gateways', array( $this, 'available_payment_gateways' ), PHP_INT_MAX );
 		}
 		// Core loaded
@@ -51,29 +51,29 @@ class Alg_WC_CPG_Core {
 	/**
 	 * get_modules.
 	 *
-	 * @version 2.4.0
+	 * @version 2.5.0
 	 * @since   2.0.0
 	 *
 	 * @todo    (dev) `$this->modules`: add keys?
 	 */
 	function get_modules() {
 		if ( ! isset( $this->modules ) ) {
-			require_once( 'modules/classes/class-alg-wc-cpg-module.php' );
+			require_once plugin_dir_path( __FILE__ ) . 'modules/classes/class-alg-wc-cpg-module.php';
 			$this->modules = array(
-				require_once( 'modules/class-alg-wc-cpg-module-date-time.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-customer-ip.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-user.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-user-role.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-cart-total.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-currency.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-country.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-product.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-product-category.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-product-tag.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-product-shipping-class.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-product-taxonomy.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-product-title.php' ),
-				require_once( 'modules/class-alg-wc-cpg-module-language.php' ),
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-date-time.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-customer-ip.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-user.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-user-role.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-cart-total.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-currency.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-country.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-category.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-tag.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-shipping-class.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-taxonomy.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-title.php',
+				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-language.php',
 			);
 			uasort( $this->modules, array( $this, 'sort_modules_by_priority' ) );
 		}
@@ -118,7 +118,7 @@ class Alg_WC_CPG_Core {
 	/**
 	 * available_payment_gateways.
 	 *
-	 * @version 2.1.0
+	 * @version 2.5.0
 	 * @since   2.0.0
 	 *
 	 * @todo    (dev) notices: `wc_clear_notices()`?
@@ -156,8 +156,13 @@ class Alg_WC_CPG_Core {
 								if ( ! $is_active ) {
 									if ( 'no' === get_option( 'alg_wc_cpg_leave_at_least_one_gateway', 'no' ) || count( $available_gateways ) > 1 ) {
 										if ( alg_wc_cpg()->core->do_debug ) {
-											alg_wc_cpg()->core->add_to_log( sprintf( __( '[%s > %s] Disabling: %s;', 'conditional-payment-gateways-for-woocommerce' ),
-												$module->get_title(), $submodule, $key ) );
+											alg_wc_cpg()->core->add_to_log( sprintf(
+												/* Translators: %1$s: Module, %2$s: Submodule, %3$s: Key. */
+												__( '[%1$s > %2$s] Disabling: %3$s;', 'conditional-payment-gateways-for-woocommerce' ),
+												$module->get_title(),
+												$submodule,
+												$key
+											) );
 										}
 										unset( $available_gateways[ $key ] );
 										if ( 'yes' === $module->get_option( $submodule, 'notice_enabled', false, 'yes' ) ) {

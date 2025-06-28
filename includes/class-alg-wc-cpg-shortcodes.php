@@ -2,13 +2,13 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Shortcodes Class
  *
- * @version 2.0.1
+ * @version 2.5.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CPG_Shortcodes' ) ) :
 
@@ -82,7 +82,7 @@ class Alg_WC_CPG_Shortcodes {
 	/**
 	 * shortcode_if.
 	 *
-	 * @version 2.0.0
+	 * @version 2.5.0
 	 * @since   2.0.0
 	 *
 	 * @todo    (dev) `shortcode_atts`?
@@ -91,49 +91,106 @@ class Alg_WC_CPG_Shortcodes {
 	 * @todo    (dev) code refactoring
 	 */
 	function shortcode_if( $atts, $content = '' ) {
-		if ( ! isset( $atts['value1'] ) || ! isset( $atts['value2'] ) || ! isset( $atts['operator'] ) ) {
+
+		if ( ! isset( $atts['value1'], $atts['value2'], $atts['operator'] ) ) {
 			return '';
 		}
+
 		// Prepare value atts
 		$atts['value1'] = do_shortcode( $this->process_att( $atts['value1'] ) );
 		$atts['value2'] = do_shortcode( $this->process_att( $atts['value2'] ) );
+
 		// Logic
 		$result = false;
 		switch ( $atts['operator'] ) {
+
 			case 'equal':
-				$result = (   alg_wc_cpg()->core->is_equal_float( $atts['value1'], $atts['value2'] ) );
+				$result = (
+					alg_wc_cpg()->core->is_equal_float(
+						$atts['value1'],
+						$atts['value2']
+					)
+				);
 				break;
+
 			case 'greater than':
 			case 'greater_than':
-				$result = ( ! alg_wc_cpg()->core->is_equal_float( $atts['value1'], $atts['value2'] ) && $atts['value1'] > $atts['value2'] );
+				$result = (
+					! alg_wc_cpg()->core->is_equal_float(
+						$atts['value1'],
+						$atts['value2']
+					) &&
+					$atts['value1'] > $atts['value2']
+				);
 				break;
+
 			case 'less than':
 			case 'less_than':
-				$result = ( ! alg_wc_cpg()->core->is_equal_float( $atts['value1'], $atts['value2'] ) && $atts['value1'] < $atts['value2'] );
+				$result = (
+					! alg_wc_cpg()->core->is_equal_float(
+						$atts['value1'],
+						$atts['value2']
+					) &&
+					$atts['value1'] < $atts['value2']
+				);
 				break;
+
 			case 'greater than or equal':
 			case 'greater_than_or_equal':
-				$result = (   alg_wc_cpg()->core->is_equal_float( $atts['value1'], $atts['value2'] ) || $atts['value1'] > $atts['value2'] );
+				$result = (
+					alg_wc_cpg()->core->is_equal_float(
+						$atts['value1'],
+						$atts['value2']
+					) ||
+					$atts['value1'] > $atts['value2']
+				);
 				break;
+
 			case 'less than or equal':
 			case 'less_than_or_equal':
-				$result = (   alg_wc_cpg()->core->is_equal_float( $atts['value1'], $atts['value2'] ) || $atts['value1'] < $atts['value2'] );
+				$result = (
+					alg_wc_cpg()->core->is_equal_float(
+						$atts['value1'],
+						$atts['value2']
+					) ||
+					$atts['value1'] < $atts['value2']
+				);
 				break;
+
 			case 'not equal':
 			case 'not_equal':
-				$result = ( ! alg_wc_cpg()->core->is_equal_float( $atts['value1'], $atts['value2'] ) );
+				$result = (
+					! alg_wc_cpg()->core->is_equal_float(
+						$atts['value1'],
+						$atts['value2']
+					)
+				);
 				break;
+
 			case 'between':
 			case 'greater than and less than':
 			case 'greater_than_and_less_than':
 				$value2 = array_map( 'trim', explode( ',', $atts['value2'] ) );
 				if ( 2 == count( $value2 ) ) {
 					$result = (
-						( ! alg_wc_cpg()->core->is_equal_float( $atts['value1'], $value2[0] ) && $atts['value1'] > $value2[0] ) &&
-						( ! alg_wc_cpg()->core->is_equal_float( $atts['value1'], $value2[1] ) && $atts['value1'] < $value2[1] )
+						(
+							! alg_wc_cpg()->core->is_equal_float(
+								$atts['value1'],
+								$value2[0]
+							) &&
+							$atts['value1'] > $value2[0]
+						) &&
+						(
+							! alg_wc_cpg()->core->is_equal_float(
+								$atts['value1'],
+								$value2[1]
+							) &&
+							$atts['value1'] < $value2[1]
+						)
 					);
 				}
 				break;
+
 			case 'between or equal':
 			case 'between_or_equal':
 			case 'greater than or equal and less than or equal':
@@ -141,45 +198,97 @@ class Alg_WC_CPG_Shortcodes {
 				$value2 = array_map( 'trim', explode( ',', $atts['value2'] ) );
 				if ( 2 == count( $value2 ) ) {
 					$result = (
-						(   alg_wc_cpg()->core->is_equal_float( $atts['value1'], $value2[0] ) || $atts['value1'] > $value2[0] ) &&
-						(   alg_wc_cpg()->core->is_equal_float( $atts['value1'], $value2[1] ) || $atts['value1'] < $value2[1] )
+						(
+							alg_wc_cpg()->core->is_equal_float(
+								$atts['value1'],
+								$value2[0]
+							) ||
+							$atts['value1'] > $value2[0]
+						) &&
+						(
+							alg_wc_cpg()->core->is_equal_float(
+								$atts['value1'],
+								$value2[1]
+							) ||
+							$atts['value1'] < $value2[1]
+						)
 					);
 				}
 				break;
+
 		}
+
 		// Final output
 		if ( $result ) {
 			$then = $content;
 			if ( '' === $then && isset( $atts['then'] ) ) {
 				$then = $this->process_att( $atts['then'] );
 			}
-			return do_shortcode( $then );
+			return wp_kses_post( do_shortcode( $then ) );
 		} else {
 			$else = '';
 			if ( isset( $atts['else'] ) ) {
 				$else = $this->process_att( $atts['else'] );
 			}
-			return do_shortcode( $else );
+			return wp_kses_post( do_shortcode( $else ) );
 		}
+
 	}
 
 	/**
 	 * shortcode_language.
 	 *
-	 * @version 2.0.0
+	 * @version 2.5.0
 	 * @since   1.1.0
 	 */
 	function shortcode_language( $atts, $content = '' ) {
+
 		// E.g.: `[alg_wc_cpg_translate lang="EN,DE" lang_text="EN & DE text" not_lang_text="Text for other languages"]`
-		if ( isset( $atts['lang_text'] ) && isset( $atts['not_lang_text'] ) && ! empty( $atts['lang'] ) ) {
-			return ( ! defined( 'ICL_LANGUAGE_CODE' ) || ! in_array( strtolower( ICL_LANGUAGE_CODE ), array_map( 'trim', explode( ',', strtolower( $atts['lang'] ) ) ) ) ) ?
-				$atts['not_lang_text'] : $atts['lang_text'];
+		if (
+			isset( $atts['lang_text'], $atts['not_lang_text'] ) &&
+			! empty( $atts['lang'] )
+		) {
+			return (
+				(
+					! defined( 'ICL_LANGUAGE_CODE' ) ||
+					! in_array(
+						strtolower( ICL_LANGUAGE_CODE ),
+						array_map( 'trim', explode( ',', strtolower( $atts['lang'] ) ) )
+					)
+				) ?
+				wp_kses_post( $atts['not_lang_text'] ) :
+				wp_kses_post( $atts['lang_text'] )
+			);
 		}
+
 		// E.g.: `[alg_wc_cpg_translate lang="EN,DE"]EN & DE text[/alg_wc_cpg_translate][alg_wc_cpg_translate not_lang="EN,DE"]Text for other languages[/alg_wc_cpg_translate]`
 		return (
-			( ! empty( $atts['lang'] )     && ( ! defined( 'ICL_LANGUAGE_CODE' ) || ! in_array( strtolower( ICL_LANGUAGE_CODE ), array_map( 'trim', explode( ',', strtolower( $atts['lang'] ) ) ) ) ) ) ||
-			( ! empty( $atts['not_lang'] ) &&     defined( 'ICL_LANGUAGE_CODE' ) &&   in_array( strtolower( ICL_LANGUAGE_CODE ), array_map( 'trim', explode( ',', strtolower( $atts['not_lang'] ) ) ) ) )
-		) ? '' : $content;
+			(
+				(
+					! empty( $atts['lang'] ) &&
+					(
+						! defined( 'ICL_LANGUAGE_CODE' ) ||
+						! in_array(
+							strtolower( ICL_LANGUAGE_CODE ),
+							array_map( 'trim', explode( ',', strtolower( $atts['lang'] ) ) )
+						)
+					)
+				) ||
+				(
+					! empty( $atts['not_lang'] ) &&
+					(
+						defined( 'ICL_LANGUAGE_CODE' ) &&
+						in_array(
+							strtolower( ICL_LANGUAGE_CODE ),
+							array_map( 'trim', explode( ',', strtolower( $atts['not_lang'] ) ) )
+						)
+					)
+				)
+			) ?
+			'' :
+			wp_kses_post( $content )
+		);
+
 	}
 
 	/**

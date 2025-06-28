@@ -8,7 +8,7 @@
  * @author  Algoritmika Ltd
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CPG_Module_Date_Time' ) ) :
 
@@ -63,7 +63,7 @@ class Alg_WC_CPG_Module_Date_Time extends Alg_WC_CPG_Module {
 	 * @since   2.0.0
 	 */
 	function get_default_notice( $submodule ) {
-		return __( 'Currently "%gateway_title%" is not available.', 'conditional-payment-gateways-for-woocommerce' );
+		return __( 'Currently "%gateway_title%" is not available.', 'conditional-payment-gateways-for-woocommerce' ); // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
 	}
 
 	/**

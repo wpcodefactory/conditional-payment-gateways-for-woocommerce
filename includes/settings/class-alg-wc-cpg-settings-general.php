@@ -2,13 +2,13 @@
 /**
  * Conditional Payment Gateways for WooCommerce - General Section Settings
  *
- * @version 2.1.0
+ * @version 2.5.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CPG_Settings_General' ) ) :
 
@@ -17,7 +17,7 @@ class Alg_WC_CPG_Settings_General extends Alg_WC_CPG_Settings_Section {
 	/**
 	 * add_admin_style.
 	 *
-	 * @version 2.1.0
+	 * @version 2.5.0
 	 * @since   2.1.0
 	 */
 	function add_admin_style() {
@@ -27,7 +27,7 @@ class Alg_WC_CPG_Settings_General extends Alg_WC_CPG_Settings_Section {
 				$ids[] = '.form-table td fieldset label[for=' . $module->get_option_name( $submodule, 'enabled', false ) .']';
 			}
 		}
-		echo '<style> ' . implode( ', ', $ids ) . ' { margin-top: 0 !important; margin-bottom: 0 !important; line-height: 1 !important; } </style>';
+		echo '<style> ' . esc_html( implode( ', ', $ids ) ) . ' { margin-top: 0 !important; margin-bottom: 0 !important; line-height: 1 !important; } </style>';
 	}
 
 	/**
@@ -58,8 +58,13 @@ class Alg_WC_CPG_Settings_General extends Alg_WC_CPG_Settings_Section {
 			array(
 				'title'    => __( 'Debug', 'conditional-payment-gateways-for-woocommerce' ),
 				'desc'     => __( 'Enable', 'conditional-payment-gateways-for-woocommerce' ),
-				'desc_tip' => sprintf( __( 'Will add a log to %s.', 'conditional-payment-gateways-for-woocommerce' ),
-					'<a href="' . admin_url( 'admin.php?page=wc-status&tab=logs' ) . '">' . __( 'WooCommerce > Status > Logs', 'conditional-payment-gateways-for-woocommerce' ) . '</a>' ),
+				'desc_tip' => sprintf(
+					/* Translators: %s: Link. */
+					__( 'Will add a log to %s.', 'conditional-payment-gateways-for-woocommerce' ),
+					'<a href="' . admin_url( 'admin.php?page=wc-status&tab=logs' ) . '">' .
+						__( 'WooCommerce > Status > Logs', 'conditional-payment-gateways-for-woocommerce' ) .
+					'</a>'
+				),
 				'id'       => 'alg_wc_cpg_debug_enabled',
 				'default'  => 'no',
 				'type'     => 'checkbox',

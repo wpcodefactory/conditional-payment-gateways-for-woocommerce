@@ -2,13 +2,13 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Section Settings
  *
- * @version 2.4.0
+ * @version 2.5.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CPG_Settings_Section' ) ) :
 
@@ -45,11 +45,21 @@ class Alg_WC_CPG_Settings_Section {
 	 * @since   2.0.0
 	 */
 	function __construct( $id, $desc, $module = false ) {
+
 		$this->id     = $id;
 		$this->desc   = $desc;
 		$this->module = $module;
-		add_filter( 'woocommerce_get_sections_alg_wc_cpg',              array( $this, 'settings_section' ) );
-		add_filter( 'woocommerce_get_settings_alg_wc_cpg_' . $this->id, array( $this, 'get_settings' ), PHP_INT_MAX );
+
+		add_filter(
+			'woocommerce_get_sections_alg_wc_cpg',
+			array( $this, 'settings_section' )
+		);
+		add_filter(
+			'woocommerce_get_settings_alg_wc_cpg_' . $this->id,
+			array( $this, 'get_settings' ),
+			PHP_INT_MAX
+		);
+
 	}
 
 	/**
@@ -74,13 +84,13 @@ class Alg_WC_CPG_Settings_Section {
 	 */
 	function add_admin_script() {
 		?><script>
-			jQuery( document ).ready( function() {
-				jQuery( '.alg-wc-cpg-select-all' ).click( function( event ) {
+			jQuery( document ).ready( function () {
+				jQuery( '.alg-wc-cpg-select-all' ).click( function ( event ) {
 					event.preventDefault();
 					jQuery( this ).closest( 'td' ).find( 'select.chosen_select' ).select2( 'destroy' ).find( 'option' ).prop( 'selected', 'selected' ).end().select2();
 					return false;
 				} );
-				jQuery( '.alg-wc-cpg-deselect-all' ).click( function( event ) {
+				jQuery( '.alg-wc-cpg-deselect-all' ).click( function ( event ) {
 					event.preventDefault();
 					jQuery( this ).closest( 'td' ).find( 'select.chosen_select' ).val( '' ).change();
 					return false;
@@ -92,7 +102,7 @@ class Alg_WC_CPG_Settings_Section {
 	/**
 	 * get_settings.
 	 *
-	 * @version 2.4.0
+	 * @version 2.5.0
 	 * @since   2.0.0
 	 *
 	 * @todo    (dev) `notice`: `alg_wc_cpg_raw`?
@@ -158,8 +168,11 @@ class Alg_WC_CPG_Settings_Section {
 					'default'  => 'yes',
 				),
 				array(
-					'desc'     => sprintf( __( 'Available placeholder(s): %s.', 'conditional-payment-gateways-for-woocommerce' ),
-						'<code>' . implode( '</code>, <code>', $this->module->get_notice_placeholders() ) . '</code>' ),
+					'desc'     => sprintf(
+						/* Translators: %s: Placeholder list. */
+						__( 'Available placeholder(s): %s.', 'conditional-payment-gateways-for-woocommerce' ),
+						'<code>' . implode( '</code>, <code>', $this->module->get_notice_placeholders() ) . '</code>'
+					),
 					'desc_tip' => __( 'You can use HTML and/or shortcodes here.', 'conditional-payment-gateways-for-woocommerce' ),
 					'type'     => 'textarea',
 					'id'       => $this->module->get_option_name( $submodule, 'notice' ),
@@ -183,10 +196,14 @@ class Alg_WC_CPG_Settings_Section {
 				$examples = $this->module->get_settings_examples( $submodule );
 				if ( ! empty( $examples ) ) {
 					$notes_title  = __( 'Notes & Examples', 'conditional-payment-gateways-for-woocommerce' );
-					$notes .= '<details>' .
-						'<summary><strong1>' .
-							sprintf( __( 'Examples: %s', 'conditional-payment-gateways-for-woocommerce' ), $this->module->get_submodule_title( $submodule ) ) .
-						'</strong1></summary>' .
+					$notes .= '<details style="margin-bottom: 10px;">' .
+						'<summary style="cursor: pointer;">' .
+							sprintf(
+								/* Translators: %s: Examples. */
+								__( 'Examples: %s', 'conditional-payment-gateways-for-woocommerce' ),
+								$this->module->get_submodule_title( $submodule )
+							) .
+						'</summary>' .
 						'<p>' . $example_icon . implode( '</p><p>' . $example_icon, $examples ) . '</p>' .
 					'</details>';
 				}
@@ -196,7 +213,7 @@ class Alg_WC_CPG_Settings_Section {
 					'title'    => $notes_title,
 					'type'     => 'title',
 					'id'       => $this->module->get_option_name( false, 'notes' ),
-					'desc'     => $notes,
+					'desc'     => '<div style="margin-bottom: 20px;">' . $notes . '</div>',
 				),
 				array(
 					'type'     => 'sectionend',

@@ -1,9 +1,9 @@
 === Conditional Payment Gateways for WooCommerce ===
-Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmukherjeeli
+Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas
 Tags: woocommerce, payment gateway, woo commerce
 Requires at least: 4.4
-Tested up to: 6.6
-Stable tag: 2.4.0
+Tested up to: 6.8
+Stable tag: 2.5.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -56,9 +56,19 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 
 1. Upload the entire plugin folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the "Plugins" menu in WordPress.
-3. Start by visiting plugin settings at "WooCommerce > Settings > Conditional Payment Gateways".
+3. Start by visiting plugin settings at "WPFactory > Conditional Payment Gateways".
 
 == Changelog ==
+
+= 2.5.0 - 28/06/2025 =
+* Dev - Security - Output escaped.
+* Dev - Plugin settings moved to the "WPFactory" menu.
+* Dev - WPFactory "Recommendations" added.
+* Dev - WPFactory "Key Manager" added.
+* Dev - Code refactoring.
+* Dev - Coding standards improved.
+* WC tested up to: 9.9.
+* Tested up to: 6.8.
 
 = 2.4.0 - 16/08/2024 =
 * Dev - "Product" module added.
@@ -136,8 +146,8 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 * Dev - Shortcodes - `[alg_wc_pgmma_translate]` renamed to `[alg_wc_cpg_translate]`.
 * Dev - Major code refactoring.
 * Plugin renamed (was "Payment Gateways Min Max Amounts for WooCommerce").
-* Tested up to: 5.7.
 * WC tested up to: 5.1.
+* Tested up to: 5.7.
 
 = 1.1.0 - 07/11/2019 =
 * Fix - Cart Total - Comparing float values with epsilon now.

@@ -2,13 +2,13 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Settings
  *
- * @version 2.2.0
+ * @version 2.5.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CPG_Settings' ) ) :
 
@@ -17,7 +17,7 @@ class Alg_WC_CPG_Settings extends WC_Settings_Page {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.2.0
+	 * @version 2.5.0
 	 * @since   2.0.0
 	 */
 	function __construct() {
@@ -27,8 +27,8 @@ class Alg_WC_CPG_Settings extends WC_Settings_Page {
 		parent::__construct();
 
 		// Sections
-		require_once( 'class-alg-wc-cpg-settings-section.php' );
-		require_once( 'class-alg-wc-cpg-settings-general.php' );
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-cpg-settings-section.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-cpg-settings-general.php';
 		foreach ( alg_wc_cpg()->core->get_modules() as $module ) {
 			new Alg_WC_CPG_Settings_Section( $module->get_id(), $module->get_title(), $module );
 		}
@@ -43,25 +43,28 @@ class Alg_WC_CPG_Settings extends WC_Settings_Page {
 	 */
 	function get_settings() {
 		global $current_section;
-		return array_merge( apply_filters( 'woocommerce_get_settings_' . $this->id . '_' . $current_section, array() ), array(
+		return array_merge(
+			apply_filters( 'woocommerce_get_settings_' . $this->id . '_' . $current_section, array() ),
 			array(
-				'title'     => __( 'Reset Settings', 'conditional-payment-gateways-for-woocommerce' ),
-				'type'      => 'title',
-				'id'        => $this->id . '_' . $current_section . '_reset_options',
-			),
-			array(
-				'title'     => __( 'Reset section settings', 'conditional-payment-gateways-for-woocommerce' ),
-				'desc'      => '<strong>' . __( 'Reset', 'conditional-payment-gateways-for-woocommerce' ) . '</strong>',
-				'desc_tip'  => __( 'Check the box and save changes to reset.', 'conditional-payment-gateways-for-woocommerce' ),
-				'id'        => $this->id . '_' . $current_section . '_reset',
-				'default'   => 'no',
-				'type'      => 'checkbox',
-			),
-			array(
-				'type'      => 'sectionend',
-				'id'        => $this->id . '_' . $current_section . '_reset_options',
-			),
-		) );
+				array(
+					'title'     => __( 'Reset Settings', 'conditional-payment-gateways-for-woocommerce' ),
+					'type'      => 'title',
+					'id'        => $this->id . '_' . $current_section . '_reset_options',
+				),
+				array(
+					'title'     => __( 'Reset section settings', 'conditional-payment-gateways-for-woocommerce' ),
+					'desc'      => '<strong>' . __( 'Reset', 'conditional-payment-gateways-for-woocommerce' ) . '</strong>',
+					'desc_tip'  => __( 'Check the box and save changes to reset.', 'conditional-payment-gateways-for-woocommerce' ),
+					'id'        => $this->id . '_' . $current_section . '_reset',
+					'default'   => 'no',
+					'type'      => 'checkbox',
+				),
+				array(
+					'type'      => 'sectionend',
+					'id'        => $this->id . '_' . $current_section . '_reset_options',
+				),
+			)
+		);
 	}
 
 	/**
@@ -80,9 +83,14 @@ class Alg_WC_CPG_Settings extends WC_Settings_Page {
 				}
 			}
 			if ( method_exists( 'WC_Admin_Settings', 'add_message' ) ) {
-				WC_Admin_Settings::add_message( __( 'Your settings have been reset.', 'conditional-payment-gateways-for-woocommerce' ) );
+				WC_Admin_Settings::add_message(
+					__( 'Your settings have been reset.', 'conditional-payment-gateways-for-woocommerce' )
+				);
 			} else {
-				add_action( 'admin_notices', array( $this, 'admin_notices_settings_reset_success' ) );
+				add_action(
+					'admin_notices',
+					array( $this, 'admin_notices_settings_reset_success' )
+				);
 			}
 		}
 	}
@@ -90,12 +98,13 @@ class Alg_WC_CPG_Settings extends WC_Settings_Page {
 	/**
 	 * admin_notices_settings_reset_success.
 	 *
-	 * @version 2.0.0
+	 * @version 2.5.0
 	 * @since   2.0.0
 	 */
 	function admin_notices_settings_reset_success() {
 		echo '<div class="notice notice-success is-dismissible"><p><strong>' .
-			__( 'Your settings have been reset.', 'conditional-payment-gateways-for-woocommerce' ) . '</strong></p></div>';
+			esc_html__( 'Your settings have been reset.', 'conditional-payment-gateways-for-woocommerce' ) .
+		'</strong></p></div>';
 	}
 
 	/**

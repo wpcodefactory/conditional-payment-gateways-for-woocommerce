@@ -8,7 +8,7 @@
  * @author  Algoritmika Ltd
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CPG_Module_User' ) ) :
 
@@ -63,7 +63,7 @@ class Alg_WC_CPG_Module_User extends Alg_WC_CPG_Module {
 	 * @since   2.0.0
 	 */
 	function get_default_notice( $submodule ) {
-		return __( '"%gateway_title%" is not available for the current user.', 'conditional-payment-gateways-for-woocommerce' );
+		return __( '"%gateway_title%" is not available for the current user.', 'conditional-payment-gateways-for-woocommerce' ); // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
 	}
 
 	/**
@@ -74,10 +74,16 @@ class Alg_WC_CPG_Module_User extends Alg_WC_CPG_Module {
 	 */
 	function get_settings_notes() {
 		return array(
-			sprintf( __( 'Options must be set as a list of user IDs, one per line, e.g.: %s', 'conditional-payment-gateways-for-woocommerce' ),
-				'<pre' . $this->get_pre_style() . '>' . implode( PHP_EOL, array( '100', '101', '122' ) ) . '</pre>' ),
-			sprintf( __( 'For guests, i.e., not logged in users, use %s (zero).', 'conditional-payment-gateways-for-woocommerce' ),
-				'<code>0</code>' ),
+			sprintf(
+				/* Translators: %s: Example. */
+				__( 'Options must be set as a list of user IDs, one per line, e.g.: %s', 'conditional-payment-gateways-for-woocommerce' ),
+				'<pre' . $this->get_pre_style() . '>' . implode( PHP_EOL, array( '100', '101', '122' ) ) . '</pre>'
+			),
+			sprintf(
+				/* Translators: %s: Zero. */
+				__( 'For guests, i.e., not logged in users, use %s (zero).', 'conditional-payment-gateways-for-woocommerce' ),
+				'<code>0</code>'
+			),
 		);
 	}
 
