@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Section Settings
  *
- * @version 2.5.2
+ * @version 2.5.3
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -102,16 +102,16 @@ class Alg_WC_CPG_Settings_Section {
 	/**
 	 * get_payment_gateway_full_title.
 	 *
-	 * @version 2.5.2
+	 * @version 2.5.3
 	 * @since   2.5.2
 	 */
 	function get_payment_gateway_full_title( $gateway, $key ) {
 
 		// Get title
-		$full_title = $gateway->get_title();
+		$full_title = wp_strip_all_tags( $gateway->get_title() );
 
 		// Maybe add admin title
-		$admin_title = $gateway->get_method_title();
+		$admin_title = wp_strip_all_tags( $gateway->get_method_title() );
 		if (
 			'' !== $admin_title &&
 			$full_title !== $admin_title

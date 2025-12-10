@@ -3,7 +3,7 @@
 Plugin Name: Conditional Payment Gateways for WooCommerce
 Plugin URI: https://wpfactory.com/item/conditional-payment-gateways-for-woocommerce/
 Description: Manage payment gateways in WooCommerce. Beautifully.
-Version: 2.5.2
+Version: 2.5.3
 Author: WPFactory
 Author URI: https://wpfactory.com
 Requires at least: 4.4
@@ -37,7 +37,7 @@ if ( 'conditional-payment-gateways-for-woocommerce.php' === basename( __FILE__ )
 	}
 }
 
-defined( 'ALG_WC_CPG_VERSION' ) || define( 'ALG_WC_CPG_VERSION', '2.5.2' );
+defined( 'ALG_WC_CPG_VERSION' ) || define( 'ALG_WC_CPG_VERSION', '2.5.3' );
 
 defined( 'ALG_WC_CPG_FILE' ) || define( 'ALG_WC_CPG_FILE', __FILE__ );
 
