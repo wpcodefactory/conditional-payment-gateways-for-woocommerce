@@ -61,7 +61,7 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 == Changelog ==
 
 = 2.5.3 - 10/12/2025 =
-* Dev - Admin settings - Payment gateway titles - Strip all tags.
+* Dev - Admin settings - Payment gateway titles - Remove HTML tags.
 
 = 2.5.2 - 10/12/2025 =
 * Dev - Admin settings - Payment gateway titles improved.
