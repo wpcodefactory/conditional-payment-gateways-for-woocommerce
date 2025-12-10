@@ -2,8 +2,8 @@
 Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags: woocommerce, payment gateway, woo commerce
 Requires at least: 4.4
-Tested up to: 6.8
-Stable tag: 2.5.1
+Tested up to: 6.9
+Stable tag: 2.5.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -59,6 +59,13 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 3. Start by visiting plugin settings at "WPFactory > Conditional Payment Gateways".
 
 == Changelog ==
+
+= 2.5.2 - 10/12/2025 =
+* Dev - Admin settings - Payment gateway titles improved.
+* Dev - WPFactory Recommendations - Library updated.
+* Dev - Coding standards improved.
+* WC tested up to: 10.3.
+* Tested up to: 6.9.
 
 = 2.5.1 - 11/09/2025 =
 * WC tested up to: 10.1.

@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Section Settings
  *
- * @version 2.5.0
+ * @version 2.5.2
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -100,9 +100,38 @@ class Alg_WC_CPG_Settings_Section {
 	}
 
 	/**
+	 * get_payment_gateway_full_title.
+	 *
+	 * @version 2.5.2
+	 * @since   2.5.2
+	 */
+	function get_payment_gateway_full_title( $gateway, $key ) {
+
+		// Get title
+		$full_title = $gateway->get_title();
+
+		// Maybe add admin title
+		$admin_title = $gateway->get_method_title();
+		if (
+			'' !== $admin_title &&
+			$full_title !== $admin_title
+		) {
+			$full_title .= " ({$admin_title})";
+		}
+
+		// Fallback
+		if ( '' === $full_title ) {
+			$full_title = $key;
+		}
+
+		return $full_title;
+
+	}
+
+	/**
 	 * get_settings.
 	 *
-	 * @version 2.5.0
+	 * @version 2.5.2
 	 * @since   2.0.0
 	 *
 	 * @todo    (dev) `notice`: `alg_wc_cpg_raw`?
@@ -142,20 +171,63 @@ class Alg_WC_CPG_Settings_Section {
 			) );
 			foreach ( WC()->payment_gateways->payment_gateways() as $key => $gateway ) {
 				$gateway_settings = array(
-					'title'             => ( '' != $gateway->get_method_title() ? $gateway->get_method_title() : $gateway->get_title() ),
+					'title'             => $this->get_payment_gateway_full_title( $gateway, $key ),
+					'desc_tip'          => sprintf(
+						/* Translators: %s: Key. */
+						__( 'Payment gateway key: %s', 'conditional-payment-gateways-for-woocommerce' ),
+						$key
+					),
 					'type'              => $this->module->get_settings_field_type(),
 					'id'                => $this->module->get_option_name( $submodule, false, $key ),
 					'default'           => $this->module->get_settings_field_default(),
 					'options'           => $this->module->get_settings_field_options(),
 					'class'             => $this->module->get_settings_field_class(),
-					'css'               => 'width:100%;' . ( 'textarea' === $this->module->get_settings_field_type() ? 'height:100px;' : '' ),
-					'custom_attributes' => apply_filters( 'alg_wc_cpg_settings', ( ! in_array( $key, array( 'cheque', 'bacs', 'cod', 'paypal' ) ) ?
-						( in_array( $this->module->get_settings_field_type(), array( 'textarea', 'text' ) ) ? array( 'readonly' => 'readonly' ) : array( 'disabled' => 'disabled' ) ) : '' ) ),
-					'desc'              => $this->module->get_settings_field_desc() . apply_filters( 'alg_wc_cpg_settings', ( ! in_array( $key, array( 'cheque', 'bacs', 'cod', 'paypal' ) ) ?
-						'<p>' . sprintf( 'You will need %s plugin to set conditions for this payment gateway.',
-							'<a href="https://wpfactory.com/item/conditional-payment-gateways-for-woocommerce/" target="_blank">Conditional Payment Gateways for WooCommerce Pro</a>' ) . '</p>' : '' ) ),
+					'css'               => (
+						'width:100%;' .
+						(
+							'textarea' === $this->module->get_settings_field_type() ?
+							'height:100px;' :
+							''
+						)
+					),
+					'custom_attributes' => apply_filters(
+						'alg_wc_cpg_settings',
+						(
+							! in_array( $key, array( 'cheque', 'bacs', 'cod', 'paypal' ) ) ?
+							(
+								in_array( $this->module->get_settings_field_type(), array( 'textarea', 'text' ) ) ?
+								array( 'readonly' => 'readonly' ) :
+								array( 'disabled' => 'disabled' )
+							) :
+							''
+						)
+					),
+					'desc'              => (
+						$this->module->get_settings_field_desc() .
+						apply_filters(
+							'alg_wc_cpg_settings',
+							(
+								! in_array( $key, array( 'cheque', 'bacs', 'cod', 'paypal' ) ) ?
+								'<p>' .
+									sprintf(
+										'You will need %s plugin to set conditions for this payment gateway.',
+										'<a href="https://wpfactory.com/item/conditional-payment-gateways-for-woocommerce/" target="_blank">' .
+											'Conditional Payment Gateways for WooCommerce Pro' .
+										'</a>'
+									) .
+								'</p>' :
+								''
+							)
+						)
+					),
 				);
-				$gateway_settings = apply_filters( 'alg_wc_cpg_gateway_settings_' . $this->module->get_id(), $gateway_settings, $submodule, $key, $gateway );
+				$gateway_settings = apply_filters(
+					'alg_wc_cpg_gateway_settings_' . $this->module->get_id(),
+					$gateway_settings,
+					$submodule,
+					$key,
+					$gateway
+				);
 				$settings[] = $gateway_settings;
 			}
 			$settings = array_merge( $settings, array(
