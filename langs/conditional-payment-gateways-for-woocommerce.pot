@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Conditional Payment Gateways for WooCommerce 2.5.3\n"
+"Project-Id-Version: Conditional Payment Gateways for WooCommerce 2.5.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/conditional-payment-gateways-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-12-10T16:34:53+00:00\n"
+"POT-Creation-Date: 2025-12-17T14:52:07+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: conditional-payment-gateways-for-woocommerce\n"
@@ -117,7 +117,7 @@ msgid "In \"%s\": %s will output current cart total, and %s will output current 
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-cart-total.php:182
-#: includes/settings/class-alg-wc-cpg-settings-section.php:235
+#: includes/settings/class-alg-wc-cpg-settings-section.php:239
 msgid "Additional notice"
 msgstr ""
 
@@ -486,7 +486,7 @@ msgstr ""
 
 #: includes/settings/class-alg-wc-cpg-settings-general.php:60
 #: includes/settings/class-alg-wc-cpg-settings-general.php:74
-#: includes/settings/class-alg-wc-cpg-settings-section.php:236
+#: includes/settings/class-alg-wc-cpg-settings-section.php:240
 msgid "Enable"
 msgstr ""
 
@@ -539,42 +539,42 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:165
+#: includes/settings/class-alg-wc-cpg-settings-section.php:169
 msgid "Enable/disable"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:166
+#: includes/settings/class-alg-wc-cpg-settings-section.php:170
 msgid "Enable section"
 msgstr ""
 
 #. Translators: %s: Key.
-#: includes/settings/class-alg-wc-cpg-settings-section.php:177
+#: includes/settings/class-alg-wc-cpg-settings-section.php:181
 msgid "Payment gateway key: %s"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:237
+#: includes/settings/class-alg-wc-cpg-settings-section.php:241
 msgid "In addition to hiding a gateway, you can also add extra notice on the checkout page."
 msgstr ""
 
 #. Translators: %s: Placeholder list.
-#: includes/settings/class-alg-wc-cpg-settings-section.php:245
+#: includes/settings/class-alg-wc-cpg-settings-section.php:249
 msgid "Available placeholder(s): %s."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:248
+#: includes/settings/class-alg-wc-cpg-settings-section.php:252
 msgid "You can use HTML and/or shortcodes here."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:266
+#: includes/settings/class-alg-wc-cpg-settings-section.php:270
 msgid "Notes"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:270
+#: includes/settings/class-alg-wc-cpg-settings-section.php:274
 msgid "Notes & Examples"
 msgstr ""
 
 #. Translators: %s: Examples.
-#: includes/settings/class-alg-wc-cpg-settings-section.php:275
+#: includes/settings/class-alg-wc-cpg-settings-section.php:279
 msgid "Examples: %s"
 msgstr ""
 
