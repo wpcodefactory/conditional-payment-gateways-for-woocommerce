@@ -60,7 +60,7 @@ With [Conditional Payment Gateways for WooCommerce Pro](https://wpfactory.com/it
 
 == Changelog ==
 
-= 2.5.4 - 23/05/2026 =
+= 2.5.5 - 23/05/2026 =
 * Tested up to: 7.0.
 * WC tested up to: 10.7.
 
