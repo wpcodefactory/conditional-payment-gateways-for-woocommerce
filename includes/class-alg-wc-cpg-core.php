@@ -2,172 +2,238 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Core Class
  *
- * @version 2.5.0
+ * @version 2.6.0
  * @since   2.0.0
  *
- * @author  Algoritmika Ltd
+ * @author WPFactory
+ *
+ * @package WPFactory\WC_Conditional_Payment_Gateways
  */
 
 defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CPG_Core' ) ) :
 
-class Alg_WC_CPG_Core {
-
 	/**
-	 * modules.
+	 * Alg_WC_CPG_Core class.
 	 *
-	 * @version 2.2.0
-	 * @since   2.2.0
-	 */
-	public $modules;
-
-	/**
-	 * do_debug.
-	 *
-	 * @version 2.2.0
-	 * @since   2.2.0
-	 */
-	public $do_debug;
-
-	/**
-	 * Constructor.
-	 *
-	 * @version 2.5.0
+	 * @version 2.6.0
 	 * @since   2.0.0
-	 *
-	 * @todo    (feature) optional "After checkout validation" (only or both)
 	 */
-	function __construct() {
-		if ( 'yes' === get_option( 'alg_wc_cpg_plugin_enabled', 'yes' ) ) {
-			$this->do_debug = ( 'yes' === get_option( 'alg_wc_cpg_debug_enabled', 'no' ) );
-			require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-cpg-shortcodes.php';
-			add_filter( 'woocommerce_available_payment_gateways', array( $this, 'available_payment_gateways' ), PHP_INT_MAX );
+	class Alg_WC_CPG_Core {
+
+		/**
+		 * Modules.
+		 *
+		 * @version 2.2.0
+		 * @since   2.2.0
+		 *
+		 * @var array
+		 */
+		public $modules;
+
+		/**
+		 * Do debug.
+		 *
+		 * @version 2.2.0
+		 * @since   2.2.0
+		 *
+		 * @var bool
+		 */
+		public $do_debug;
+
+		/**
+		 * Constructor.
+		 *
+		 * @version 2.5.0
+		 * @since   2.0.0
+		 *
+		 * @todo (feature) Optional "After checkout validation" (only or both).
+		 */
+		public function __construct() {
+			if ( 'yes' === get_option( 'alg_wc_cpg_plugin_enabled', 'yes' ) ) {
+
+				$this->do_debug = ( 'yes' === get_option( 'alg_wc_cpg_debug_enabled', 'no' ) );
+
+				require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-cpg-shortcodes.php';
+
+				add_filter(
+					'woocommerce_available_payment_gateways',
+					array( $this, 'available_payment_gateways' ),
+					PHP_INT_MAX
+				);
+			}
+
+			// Core loaded.
+			do_action( 'alg_wc_cpg_core_loaded' );
 		}
-		// Core loaded
-		do_action( 'alg_wc_cpg_core_loaded' );
-	}
 
-	/**
-	 * get_modules.
-	 *
-	 * @version 2.5.0
-	 * @since   2.0.0
-	 *
-	 * @todo    (dev) `$this->modules`: add keys?
-	 */
-	function get_modules() {
-		if ( ! isset( $this->modules ) ) {
-			require_once plugin_dir_path( __FILE__ ) . 'modules/classes/class-alg-wc-cpg-module.php';
-			$this->modules = array(
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-date-time.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-customer-ip.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-user.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-user-role.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-cart-total.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-currency.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-country.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-category.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-tag.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-shipping-class.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-taxonomy.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-title.php',
-				require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-language.php',
-			);
-			uasort( $this->modules, array( $this, 'sort_modules_by_priority' ) );
+		/**
+		 * Get modules.
+		 *
+		 * @version 2.5.0
+		 * @since   2.0.0
+		 *
+		 * @todo (dev) `$this->modules`: Add keys?
+		 */
+		public function get_modules() {
+			if ( ! isset( $this->modules ) ) {
+				require_once plugin_dir_path( __FILE__ ) . 'modules/classes/class-alg-wc-cpg-module.php';
+				$this->modules = array(
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-date-time.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-customer-ip.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-user.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-user-role.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-cart-total.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-currency.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-country.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-category.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-tag.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-shipping-class.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-taxonomy.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-product-title.php',
+					require_once plugin_dir_path( __FILE__ ) . 'modules/class-alg-wc-cpg-module-language.php',
+				);
+				uasort( $this->modules, array( $this, 'sort_modules_by_priority' ) );
+			}
+			return $this->modules;
 		}
-		return $this->modules;
-	}
 
-	/**
-	 * sort_modules_by_priority.
-	 *
-	 * @version 2.0.0
-	 * @since   2.0.0
-	 */
-	function sort_modules_by_priority( $a, $b ) {
-		if ( $a->get_priority() == $b->get_priority() ) {
-			return 0;
+		/**
+		 * Sort modules by priority.
+		 *
+		 * @version 2.6.0
+		 * @since   2.0.0
+		 *
+		 * @param object $a First module to compare.
+		 * @param object $b Second module to compare.
+		 *
+		 * @return int Comparison result for sorting.
+		 */
+		public function sort_modules_by_priority( $a, $b ) {
+			if ( $a->get_priority() === $b->get_priority() ) {
+				return 0;
+			}
+			return ( $a->get_priority() < $b->get_priority() ) ? -1 : 1;
 		}
-		return ( $a->get_priority() < $b->get_priority() ) ? -1 : 1;
-	}
 
-	/**
-	 * is_equal_float.
-	 *
-	 * @version 2.0.0
-	 * @since   2.0.0
-	 */
-	function is_equal_float( $float1, $float2 ) {
-		return ( abs( $float1 - $float2 ) < ( defined( 'PHP_FLOAT_EPSILON' ) ? PHP_FLOAT_EPSILON : 0.000000001 ) );
-	}
-
-	/**
-	 * add_to_log.
-	 *
-	 * @version 2.0.0
-	 * @since   2.0.0
-	 */
-	function add_to_log( $message ) {
-		if ( function_exists( 'wc_get_logger' ) && ( $log = wc_get_logger() ) ) {
-			$log->log( 'info', $message, array( 'source' => 'conditional-payment-gateways-for-woocommerce' ) );
+		/**
+		 * Is equal float.
+		 *
+		 * @version 2.0.0
+		 * @since   2.0.0
+		 *
+		 * @param float $float1 First float to compare.
+		 * @param float $float2 Second float to compare.
+		 *
+		 * @return bool True if floats are equal, false otherwise.
+		 */
+		public function is_equal_float( $float1, $float2 ) {
+			return ( abs( $float1 - $float2 ) < ( defined( 'PHP_FLOAT_EPSILON' ) ? PHP_FLOAT_EPSILON : 0.000000001 ) );
 		}
-	}
 
-	/**
-	 * available_payment_gateways.
-	 *
-	 * @version 2.5.0
-	 * @since   2.0.0
-	 *
-	 * @todo    (dev) notices: `wc_clear_notices()`?
-	 * @todo    (dev) notices: `wp_doing_ajax()`?
-	 */
-	function available_payment_gateways( $available_gateways ) {
-		$notices = array();
-		// Check gateways
-		foreach ( $this->get_modules() as $module ) {
-			foreach ( $module->get_submodules() as $submodule ) {
-				if ( 'yes' === $module->get_option( $submodule, 'enabled', false, 'no' ) ) {
-					$values = $module->get_option( $submodule, false, false, array() );
-					if ( ! empty( $values ) ) {
-						foreach ( $available_gateways as $key => $gateway ) {
-							if ( ! apply_filters( 'alg_wc_cpg_pre_check', ( in_array( $key, array( 'cheque', 'bacs', 'cod', 'paypal' ) ) ) ) ) {
-								continue;
-							}
-							$value = ( ! empty( $values[ $key ] ) ? ( is_array( $values[ $key ] ) ? $values[ $key ] : do_shortcode( $values[ $key ] ) ) : false );
-							if ( ! empty( $value ) ) {
-								$result = $module->process( $value );
-								switch ( $submodule ) {
-									case 'incl':
-										$is_active =   $result;
-										break;
-									case 'excl':
-										$is_active = ! $result;
-										break;
-									case 'min':
-										$is_active = $this->is_equal_float( $result, $value ) || $result > $value;
-										break;
-									case 'max':
-										$is_active = $this->is_equal_float( $result, $value ) || $result < $value;
-										break;
-								}
-								if ( ! $is_active ) {
-									if ( 'no' === get_option( 'alg_wc_cpg_leave_at_least_one_gateway', 'no' ) || count( $available_gateways ) > 1 ) {
-										if ( alg_wc_cpg()->core->do_debug ) {
-											alg_wc_cpg()->core->add_to_log( sprintf(
-												/* Translators: %1$s: Module, %2$s: Submodule, %3$s: Key. */
-												__( '[%1$s > %2$s] Disabling: %3$s;', 'conditional-payment-gateways-for-woocommerce' ),
-												$module->get_title(),
-												$submodule,
-												$key
-											) );
-										}
-										unset( $available_gateways[ $key ] );
-										if ( 'yes' === $module->get_option( $submodule, 'notice_enabled', false, 'yes' ) ) {
-											if ( '' !== ( $notice = $module->get_notice( $submodule, $gateway, ( is_array( $value ) ? implode( ', ', $value ) : $value ), $result ) ) ) {
-												$notices[] = $notice;
+		/**
+		 * Add to log.
+		 *
+		 * @version 2.6.0
+		 * @since   2.0.0
+		 *
+		 * @param string $message Message to add to the log.
+		 */
+		public function add_to_log( $message ) {
+			if ( ! function_exists( 'wc_get_logger' ) ) {
+				return;
+			}
+			$log = wc_get_logger();
+			if ( $log ) {
+				$log->log(
+					'info',
+					$message,
+					array( 'source' => 'conditional-payment-gateways-for-woocommerce' )
+				);
+			}
+		}
+
+		/**
+		 * Available payment gateways.
+		 *
+		 * @version 2.6.0
+		 * @since   2.0.0
+		 *
+		 * @param array $available_gateways Array of available payment gateways.
+		 *
+		 * @return array Filtered array of available payment gateways.
+		 *
+		 * @todo (dev) Notices: `wc_clear_notices()`?
+		 * @todo (dev) Notices: `wp_doing_ajax()`?
+		 */
+		public function available_payment_gateways( $available_gateways ) {
+			$notices = array();
+
+			// Check gateways.
+			foreach ( $this->get_modules() as $module ) {
+				foreach ( $module->get_submodules() as $submodule ) {
+					if ( 'yes' === $module->get_option( $submodule, 'enabled', false, 'no' ) ) {
+						$values = $module->get_option( $submodule, false, false, array() );
+						if ( ! empty( $values ) ) {
+							foreach ( $available_gateways as $key => $gateway ) {
+								$value = (
+									! empty( $values[ $key ] ) ?
+									(
+										is_array( $values[ $key ] ) ?
+										$values[ $key ] :
+										do_shortcode( $values[ $key ] )
+									) :
+									false
+								);
+								if ( ! empty( $value ) ) {
+									$result = $module->process( $value );
+									switch ( $submodule ) {
+										case 'incl':
+											$is_active = $result;
+											break;
+										case 'excl':
+											$is_active = ! $result;
+											break;
+										case 'min':
+											$is_active = $this->is_equal_float( $result, $value ) || $result > $value;
+											break;
+										case 'max':
+											$is_active = $this->is_equal_float( $result, $value ) || $result < $value;
+											break;
+									}
+									if ( ! $is_active ) {
+										if (
+											'no' === get_option( 'alg_wc_cpg_leave_at_least_one_gateway', 'no' ) ||
+											count( $available_gateways ) > 1
+										) {
+											if ( alg_wc_cpg()->core->do_debug ) {
+												alg_wc_cpg()->core->add_to_log(
+													sprintf(
+														/* Translators: %1$s: Module, %2$s: Submodule, %3$s: Key. */
+														__( '[%1$s > %2$s] Disabling: %3$s;', 'conditional-payment-gateways-for-woocommerce' ),
+														$module->get_title(),
+														$submodule,
+														$key
+													)
+												);
+											}
+											unset( $available_gateways[ $key ] );
+											if ( 'yes' === $module->get_option( $submodule, 'notice_enabled', false, 'yes' ) ) {
+												$notice = $module->get_notice(
+													$submodule,
+													$gateway,
+													(
+														is_array( $value ) ?
+														implode( ', ', $value ) :
+														$value
+													),
+													$result
+												);
+												if ( '' !== $notice ) {
+													$notices[] = $notice;
+												}
 											}
 										}
 									}
@@ -177,20 +243,20 @@ class Alg_WC_CPG_Core {
 					}
 				}
 			}
-		}
-		// Add notices
-		if ( ! empty( $notices ) && is_checkout() && wp_doing_ajax() ) {
-			$notice_type = get_option( 'alg_wc_cpg_notice_type', 'notice' );
-			foreach ( $notices as $notice ) {
-				if ( ! wc_has_notice( $notice, $notice_type ) ) {
-					wc_add_notice( $notice, $notice_type );
+
+			// Add notices.
+			if ( ! empty( $notices ) && is_checkout() && wp_doing_ajax() ) {
+				$notice_type = get_option( 'alg_wc_cpg_notice_type', 'notice' );
+				foreach ( $notices as $notice ) {
+					if ( ! wc_has_notice( $notice, $notice_type ) ) {
+						wc_add_notice( $notice, $notice_type );
+					}
 				}
 			}
-		}
-		return $available_gateways;
-	}
 
-}
+			return $available_gateways;
+		}
+	}
 
 endif;
 

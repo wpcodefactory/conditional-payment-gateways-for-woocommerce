@@ -1,15 +1,15 @@
-# Copyright (C) 2025 WPFactory
+# Copyright (C) 2026 WPFactory
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Conditional Payment Gateways for WooCommerce 2.5.4\n"
+"Project-Id-Version: Conditional Payment Gateways for WooCommerce 2.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/conditional-payment-gateways-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-12-17T14:52:07+00:00\n"
+"POT-Creation-Date: 2026-10-02T10:42:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: conditional-payment-gateways-for-woocommerce\n"
@@ -40,134 +40,138 @@ msgid "https://wpfactory.com"
 msgstr ""
 
 #. Translators: %1$s: Module, %2$s: Submodule, %3$s: Key.
-#: includes/class-alg-wc-cpg-core.php:161
+#: includes/class-alg-wc-cpg-core.php:215
 msgid "[%1$s > %2$s] Disabling: %3$s;"
 msgstr ""
 
-#: includes/class-alg-wc-cpg.php:193
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:170
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:118
+#: includes/class-alg-wc-cpg.php:190
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:183
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:131
 msgid "Settings"
 msgstr ""
 
-#: includes/class-alg-wc-cpg.php:198
+#: includes/class-alg-wc-cpg.php:195
 msgid "Go Pro"
 msgstr ""
 
-#: includes/class-alg-wc-cpg.php:243
-#: includes/settings/class-alg-wc-cpg-settings-general.php:52
-#: includes/settings/class-alg-wc-cpg-settings.php:26
+#: includes/class-alg-wc-cpg.php:238
+#: includes/settings/class-alg-wc-cpg-settings-general.php:41
+#: includes/settings/class-alg-wc-cpg-settings.php:33
 msgid "Conditional Payment Gateways"
 msgstr ""
 
-#: includes/class-alg-wc-cpg.php:244
+#: includes/class-alg-wc-cpg.php:239
 msgid "WooCommerce Conditional Payment Methods"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:44
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:46
 msgid "Cart Total"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:56
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:58
 msgid "Hides payment gateways based on min/max cart (i.e., order) amounts."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:70
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:72
 msgid "Payment gateway will be hidden if cart total is <strong>below</strong> this amount."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:72
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:74
 msgid "Payment gateway will be hidden if cart total <strong>exceeds</strong> this amount."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:105
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:107
 msgid "Minimum amount for \"%gateway_title%\" is %value%. Your cart total is %result%."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:107
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:109
 msgid "Maximum amount for \"%gateway_title%\" is %value%. Your cart total is %result%."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:147
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:149
 msgid "Cart Total Calculation"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:148
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:150
 msgid "This section sets how cart total should be calculated when comparing it with min/max amounts."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:153
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:155
 msgid "Cart total"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:154
+#. translators: %s: shortcode
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:158
 msgid "You should use %s shortcode here."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:179
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:184
 msgid "If set to zero - option is ignored."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:180
+#. translators: %s: dot symbol
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:187
 msgid "For decimal values use dot %s symbol."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:181
-msgid "In \"%s\": %s will output current cart total, and %s will output current gateway min or max amount."
+#. translators: %1$s: section title, %2$s: current cart total placeholder, %3$s: current gateway min or max amount placeholder
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:192
+msgid "In \"%1$s\": %2$s will output current cart total, and %3$s will output current gateway min or max amount."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:182
-#: includes/settings/class-alg-wc-cpg-settings-section.php:239
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:193
+#: includes/settings/class-alg-wc-cpg-settings-section.php:209
 msgid "Additional notice"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-cart-total.php:209
-msgid "[%s] Value: %s; Current: %s;"
+#. translators: %1$s: title, %2$s: value, %3$s: current value
+#: includes/modules/class-alg-wc-cpg-module-cart-total.php:232
+msgid "[%1$s] Value: %2$s; Current: %3$s;"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-country.php:44
+#: includes/modules/class-alg-wc-cpg-module-country.php:46
 msgid "Country"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-country.php:54
+#: includes/modules/class-alg-wc-cpg-module-country.php:56
 msgid "Hides payment gateways by current user country (by IP, billing or shipping country)."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-country.php:64
+#: includes/modules/class-alg-wc-cpg-module-country.php:66
 msgid "\"%gateway_title%\" is not available for your country."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-country.php:75
-#: includes/modules/class-alg-wc-cpg-module-currency.php:77
-#: includes/modules/class-alg-wc-cpg-module-language.php:82
-#: includes/modules/class-alg-wc-cpg-module-product-category.php:91
-#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:91
-#: includes/modules/class-alg-wc-cpg-module-product-tag.php:91
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:92
-#: includes/modules/class-alg-wc-cpg-module-product.php:102
-#: includes/modules/class-alg-wc-cpg-module-user-role.php:91
-msgid "You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the \"Additional notice\" values."
+#: includes/modules/class-alg-wc-cpg-module-country.php:77
+#: includes/modules/class-alg-wc-cpg-module-currency.php:79
+#: includes/modules/class-alg-wc-cpg-module-language.php:89
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:101
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:101
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:101
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:102
+#: includes/modules/class-alg-wc-cpg-module-product.php:111
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:101
+msgid "You can use shortcodes when setting the \"Additional notice\" values."
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-country.php:130
 #: includes/modules/class-alg-wc-cpg-module-currency.php:130
-#: includes/modules/class-alg-wc-cpg-module-language.php:135
-#: includes/modules/class-alg-wc-cpg-module-product-category.php:149
-#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:151
-#: includes/modules/class-alg-wc-cpg-module-product-tag.php:151
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:153
-#: includes/modules/class-alg-wc-cpg-module-user-role.php:145
+#: includes/modules/class-alg-wc-cpg-module-language.php:140
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:162
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:164
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:164
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:166
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:153
 msgid "Select all"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-country.php:131
 #: includes/modules/class-alg-wc-cpg-module-currency.php:131
-#: includes/modules/class-alg-wc-cpg-module-language.php:136
-#: includes/modules/class-alg-wc-cpg-module-product-category.php:150
-#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:152
-#: includes/modules/class-alg-wc-cpg-module-product-tag.php:152
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:154
-#: includes/modules/class-alg-wc-cpg-module-user-role.php:146
+#: includes/modules/class-alg-wc-cpg-module-language.php:141
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:163
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:165
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:165
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:167
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:154
 msgid "Deselect all"
 msgstr ""
 
@@ -191,410 +195,437 @@ msgstr ""
 msgid "Shipping country"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:44
+#: includes/modules/class-alg-wc-cpg-module-currency.php:46
 msgid "Currency"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:56
+#: includes/modules/class-alg-wc-cpg-module-currency.php:58
 msgid "Hides payment gateways by the current currency. For example, this is useful, if you are using some additional currency switcher plugin."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-currency.php:66
+#: includes/modules/class-alg-wc-cpg-module-currency.php:68
 msgid "\"%gateway_title%\" is not available for the current currency."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:34
+#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:36
 msgid "Customer IP"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:51
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:153
-#: includes/modules/class-alg-wc-cpg-module-product-category.php:37
-#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:37
-#: includes/modules/class-alg-wc-cpg-module-product-tag.php:37
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:37
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:50
-#: includes/modules/class-alg-wc-cpg-module-product.php:48
-#: includes/modules/class-alg-wc-cpg-module-user-role.php:37
-#: includes/modules/classes/class-alg-wc-cpg-module.php:70
-msgid "[%s] Value: %s; Current: %s; Result: %s;"
-msgstr ""
-
-#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:106
-msgid "Hides payment gateways by current customer IP."
+#. translators: %1$s: Module title, %2$s: Value, %3$s: Current value, %4$s: Result
+#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:56
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:203
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:42
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:42
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:42
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:42
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:55
+#: includes/modules/class-alg-wc-cpg-module-product.php:52
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:42
+#: includes/modules/classes/class-alg-wc-cpg-module.php:73
+msgid "[%1$s] Value: %2$s; Current: %3$s; Result: %4$s;"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-customer-ip.php:116
+msgid "Hides payment gateways by current customer IP."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:126
 msgid "\"%gateway_title%\" is not available for your IP address."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:129
+#. translators: %s: Example list of IPs
+#: includes/modules/class-alg-wc-cpg-module-customer-ip.php:141
 msgid "Options must be set as a list of IPs, one IP per line, accepts CIDR ranges, e.g.: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:44
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:46
 msgid "Date/Time"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:56
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:58
 msgid "Hides payment gateways by current date and time."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:66
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:68
 msgid "Currently \"%gateway_title%\" is not available."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:79
-msgid "Options must be set as date range(s) in %s format, i.e., dates must be separated with the hyphen %s symbol."
+#. translators: %1$s: Date format, %2$s: Hyphen symbol
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:83
+msgid "Options must be set as date range(s) in %1$s format, i.e., dates must be separated with the hyphen %2$s symbol."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:81
+#. translators: %s: Example list of date ranges
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:89
 msgid "You can add multiple date ranges, one per line (algorithm stops on first matching date range), i.e.: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:83
-msgid "Dates can be set in any format parsed by the PHP %s function, except you can't use hyphen %s symbol, as it's reserved for separating %s and %s values."
+#. translators: %1$s: PHP strtotime() function page link, %2$s: Hyphen symbol, %3$s: "from", %4$s: "to"
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:94
+msgid "Dates can be set in any format parsed by the PHP %1$s function, except you can't use hyphen %2$s symbol, as it's reserved for separating %3$s and %4$s values."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:85
+#. translators: %s: Current date
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:102
 msgid "Current date: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:100
+#. translators: %s: Example time range
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:120
 msgid "Enable payment gateway only before 3:00 PM each day: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:102
+#. translators: %s: Example time range
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:125
 msgid "Enable payment gateway only before 3:00 PM each day, or before 5:00 PM on Mondays: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:104
+#. translators: %s: Example date range
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:130
 msgid "Enable payment gateway for the summer months only: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:106
+#. translators: %s: Example date range
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:135
 msgid "Enable payment gateway for the February only: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:111
+#. translators: %s: Example time range
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:143
 msgid "Disable payment gateway each day after 4:00 PM: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:113
+#. translators: %s: Example time range
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:148
 msgid "Disable payment gateway each day after 4:00 PM, and for the whole day on weekends: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:115
+#. translators: %s: Example date range
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:153
 msgid "Disable payment gateway for the summer months: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:117
+#. translators: %s: Example date range
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:158
 msgid "Disable payment gateway for the February: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-date-time.php:152
-msgid "from %s to %s"
+#. translators: %1$s: Start date/time, %2$s: End date/time
+#: includes/modules/class-alg-wc-cpg-module-date-time.php:196
+msgid "from %1$s to %2$s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:44
+#: includes/modules/class-alg-wc-cpg-module-language.php:46
 msgid "Language"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:57
+#: includes/modules/class-alg-wc-cpg-module-language.php:60
 msgid "WPML or Polylang plugin is active."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:58
+#: includes/modules/class-alg-wc-cpg-module-language.php:61
 msgid "WPML or Polylang plugin is disabled."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:59
-msgid "Hides payment gateways by the current %s or %s language."
+#. translators: %1$s: WPML plugin link, %2$s: Polylang plugin link
+#: includes/modules/class-alg-wc-cpg-module-language.php:65
+msgid "Hides payment gateways by the current %1$s or %2$s language."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-language.php:71
+#: includes/modules/class-alg-wc-cpg-module-language.php:78
 msgid "\"%gateway_title%\" is not available for the current language."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-category.php:60
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:70
 msgid "Product Category"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-category.php:70
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:80
 msgid "Hides payment gateways by cart product categories."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-category.php:80
-#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:80
-#: includes/modules/class-alg-wc-cpg-module-product-tag.php:80
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:81
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:93
-#: includes/modules/class-alg-wc-cpg-module-product.php:91
+#: includes/modules/class-alg-wc-cpg-module-product-category.php:90
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:90
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:90
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:91
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:103
+#: includes/modules/class-alg-wc-cpg-module-product.php:100
 msgid "\"%gateway_title%\" is not available for the cart products."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:60
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:70
 msgid "Product Shipping Class"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:70
+#: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:80
 msgid "Hides payment gateways by cart product shipping classes."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-tag.php:60
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:70
 msgid "Product Tag"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-tag.php:70
+#: includes/modules/class-alg-wc-cpg-module-product-tag.php:80
 msgid "Hides payment gateways by cart product tags."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:60
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:70
 msgid "Product Taxonomy"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:70
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:80
 msgid "Hides payment gateways by cart product custom taxonomy, e.g., brands."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:71
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:81
 msgid "Start by setting the \"Taxonomy slug\" option at the bottom of the page."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:175
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:188
 msgid "Taxonomy slug"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:176
+#. translators: %s: example taxonomy slug
+#: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:191
 msgid "E.g., %s."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:73
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:83
 msgid "Product Title"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:83
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:93
 msgid "Hides payment gateways by cart product titles (or descriptions)."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:104
-msgid "Options must be set as a list of strings, one string per line, e.g.: %s"
+#. translators: %s: Example list of titles
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:116
+msgid "Options must be set as a list of titles, one title per line, e.g.: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:123
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:136
 msgid "Product data"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:129
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:142
 msgid "Product title"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:130
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:143
 msgid "Product description"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:131
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:144
 msgid "Product short description"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:135
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:148
 msgid "Comparison function"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:141
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:154
 msgid "Case-sensitive"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:142
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:155
 msgid "Case-insensitive"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product.php:71
+#: includes/modules/class-alg-wc-cpg-module-product.php:80
 msgid "Product"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product.php:81
+#: includes/modules/class-alg-wc-cpg-module-product.php:90
 msgid "Hides payment gateways by cart products."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product.php:141
+#. translators: %d: Product ID
+#: includes/modules/class-alg-wc-cpg-module-product.php:152
 msgid "Product #%d"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-user-role.php:60
-msgid "User Role"
+#: includes/modules/class-alg-wc-cpg-module-product.php:166
+msgid "Search for a product&hellip;"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-user-role.php:70
-msgid "Hides payment gateways by current user role."
+msgid "User Role"
 msgstr ""
 
 #: includes/modules/class-alg-wc-cpg-module-user-role.php:80
-#: includes/modules/class-alg-wc-cpg-module-user.php:66
+msgid "Hides payment gateways by current user role."
+msgstr ""
+
+#: includes/modules/class-alg-wc-cpg-module-user-role.php:90
+#: includes/modules/class-alg-wc-cpg-module-user.php:68
 msgid "\"%gateway_title%\" is not available for the current user."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-user.php:44
+#: includes/modules/class-alg-wc-cpg-module-user.php:46
 msgid "User"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-user.php:56
+#: includes/modules/class-alg-wc-cpg-module-user.php:58
 msgid "Hides payment gateways by current user ID."
 msgstr ""
 
 #. Translators: %s: Example.
-#: includes/modules/class-alg-wc-cpg-module-user.php:79
+#: includes/modules/class-alg-wc-cpg-module-user.php:81
 msgid "Options must be set as a list of user IDs, one per line, e.g.: %s"
 msgstr ""
 
 #. Translators: %s: Zero.
-#: includes/modules/class-alg-wc-cpg-module-user.php:84
+#: includes/modules/class-alg-wc-cpg-module-user.php:86
 msgid "For guests, i.e., not logged in users, use %s (zero)."
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:177
+#. translators: %s: Submodule title
+#: includes/modules/classes/class-alg-wc-cpg-module.php:186
 msgid "Require %s"
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:180
+#. translators: %s: Submodule title
+#: includes/modules/classes/class-alg-wc-cpg-module.php:190
 msgid "Exclude %s"
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:183
+#. translators: %s: Submodule title
+#: includes/modules/classes/class-alg-wc-cpg-module.php:194
 msgid "Minimum %s"
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:186
+#. translators: %s: Submodule title
+#: includes/modules/classes/class-alg-wc-cpg-module.php:198
 msgid "Maximum %s"
 msgstr ""
 
-#: includes/modules/classes/class-alg-wc-cpg-module.php:252
-msgid "You can use <a target=\"_blank\" href=\"%s\">shortcodes</a> when setting the values."
+#: includes/modules/classes/class-alg-wc-cpg-module.php:264
+msgid "You can use shortcodes when setting the values."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:47
+#: includes/settings/class-alg-wc-cpg-settings-general.php:36
 msgid "Conditional Payment Gateways Options"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:53
+#: includes/settings/class-alg-wc-cpg-settings-general.php:42
 msgid "Enable plugin"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:59
+#: includes/settings/class-alg-wc-cpg-settings-general.php:48
 msgid "Debug"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:60
-#: includes/settings/class-alg-wc-cpg-settings-general.php:74
-#: includes/settings/class-alg-wc-cpg-settings-section.php:240
+#: includes/settings/class-alg-wc-cpg-settings-general.php:49
+#: includes/settings/class-alg-wc-cpg-settings-general.php:63
+#: includes/settings/class-alg-wc-cpg-settings-section.php:210
 msgid "Enable"
 msgstr ""
 
 #. Translators: %s: Link.
-#: includes/settings/class-alg-wc-cpg-settings-general.php:63
+#: includes/settings/class-alg-wc-cpg-settings-general.php:52
 msgid "Will add a log to %s."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:65
+#: includes/settings/class-alg-wc-cpg-settings-general.php:54
 msgid "WooCommerce > Status > Logs"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:73
+#: includes/settings/class-alg-wc-cpg-settings-general.php:62
 msgid "Leave at least one gateway"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:75
+#: includes/settings/class-alg-wc-cpg-settings-general.php:64
 msgid "Will ensure that when all payment gateways do not match \"enabled\" criteria, one last remaining gateway will still remain active in any case."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:81
+#: includes/settings/class-alg-wc-cpg-settings-general.php:70
 msgid "Notice styling"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:82
+#: includes/settings/class-alg-wc-cpg-settings-general.php:71
 msgid "Will be used for all additional (optional) notices."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:88
+#: includes/settings/class-alg-wc-cpg-settings-general.php:77
 msgid "Notice"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:89
+#: includes/settings/class-alg-wc-cpg-settings-general.php:78
 msgid "Error"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:90
+#: includes/settings/class-alg-wc-cpg-settings-general.php:79
 msgid "Success"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:101
+#: includes/settings/class-alg-wc-cpg-settings-general.php:90
 msgid "Available Conditions"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:120
+#: includes/settings/class-alg-wc-cpg-settings-general.php:113
 msgid "Conditions"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-general.php:144
+#: includes/settings/class-alg-wc-cpg-settings-general.php:152
 msgid "General"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:169
+#: includes/settings/class-alg-wc-cpg-settings-section.php:165
 msgid "Enable/disable"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:170
+#: includes/settings/class-alg-wc-cpg-settings-section.php:166
 msgid "Enable section"
 msgstr ""
 
 #. Translators: %s: Key.
-#: includes/settings/class-alg-wc-cpg-settings-section.php:181
+#: includes/settings/class-alg-wc-cpg-settings-section.php:178
 msgid "Payment gateway key: %s"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:241
+#: includes/settings/class-alg-wc-cpg-settings-section.php:211
 msgid "In addition to hiding a gateway, you can also add extra notice on the checkout page."
 msgstr ""
 
 #. Translators: %s: Placeholder list.
-#: includes/settings/class-alg-wc-cpg-settings-section.php:249
+#: includes/settings/class-alg-wc-cpg-settings-section.php:219
 msgid "Available placeholder(s): %s."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:252
+#: includes/settings/class-alg-wc-cpg-settings-section.php:222
 msgid "You can use HTML and/or shortcodes here."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:270
+#: includes/settings/class-alg-wc-cpg-settings-section.php:241
 msgid "Notes"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings-section.php:274
+#: includes/settings/class-alg-wc-cpg-settings-section.php:245
 msgid "Notes & Examples"
 msgstr ""
 
 #. Translators: %s: Examples.
-#: includes/settings/class-alg-wc-cpg-settings-section.php:279
+#: includes/settings/class-alg-wc-cpg-settings-section.php:250
 msgid "Examples: %s"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:50
+#: includes/settings/class-alg-wc-cpg-settings.php:135
 msgid "Reset Settings"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:55
+#: includes/settings/class-alg-wc-cpg-settings.php:140
 msgid "Reset section settings"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:56
+#: includes/settings/class-alg-wc-cpg-settings.php:141
 msgid "Reset"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:57
+#: includes/settings/class-alg-wc-cpg-settings.php:142
 msgid "Check the box and save changes to reset."
 msgstr ""
 
-#: includes/settings/class-alg-wc-cpg-settings.php:87
-#: includes/settings/class-alg-wc-cpg-settings.php:106
+#: includes/settings/class-alg-wc-cpg-settings.php:172
+#: includes/settings/class-alg-wc-cpg-settings.php:191
 msgid "Your settings have been reset."
 msgstr ""
