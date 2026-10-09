@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Conditional Payment Gateways for WooCommerce 2.6.0\n"
+"Project-Id-Version: Conditional Payment Gateways for WooCommerce 2.6.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/conditional-payment-gateways-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-02T10:42:03+00:00\n"
+"POT-Creation-Date: 2026-10-09T18:05:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: conditional-payment-gateways-for-woocommerce\n"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: includes/class-alg-wc-cpg.php:190
 #: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:183
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:131
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:148
 msgid "Settings"
 msgstr ""
 
@@ -218,7 +218,7 @@ msgstr ""
 #: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:42
 #: includes/modules/class-alg-wc-cpg-module-product-tag.php:42
 #: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:42
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:55
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:68
 #: includes/modules/class-alg-wc-cpg-module-product.php:52
 #: includes/modules/class-alg-wc-cpg-module-user-role.php:42
 #: includes/modules/classes/class-alg-wc-cpg-module.php:73
@@ -348,7 +348,7 @@ msgstr ""
 #: includes/modules/class-alg-wc-cpg-module-product-shipping-class.php:90
 #: includes/modules/class-alg-wc-cpg-module-product-tag.php:90
 #: includes/modules/class-alg-wc-cpg-module-product-taxonomy.php:91
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:103
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:120
 #: includes/modules/class-alg-wc-cpg-module-product.php:100
 msgid "\"%gateway_title%\" is not available for the cart products."
 msgstr ""
@@ -390,44 +390,44 @@ msgstr ""
 msgid "E.g., %s."
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:83
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:96
 msgid "Product Title"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:93
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:106
 msgid "Hides payment gateways by cart product titles (or descriptions)."
 msgstr ""
 
 #. translators: %s: Example list of titles
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:116
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:133
 msgid "Options must be set as a list of titles, one title per line, e.g.: %s"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:136
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:153
 msgid "Product data"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:142
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:159
 msgid "Product title"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:143
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:160
 msgid "Product description"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:144
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:161
 msgid "Product short description"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:148
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:165
 msgid "Comparison function"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:154
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:171
 msgid "Case-sensitive"
 msgstr ""
 
-#: includes/modules/class-alg-wc-cpg-module-product-title.php:155
+#: includes/modules/class-alg-wc-cpg-module-product-title.php:172
 msgid "Case-insensitive"
 msgstr ""
 

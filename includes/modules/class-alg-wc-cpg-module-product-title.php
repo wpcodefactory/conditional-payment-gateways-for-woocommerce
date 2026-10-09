@@ -2,7 +2,7 @@
 /**
  * Conditional Payment Gateways for WooCommerce - Module - Product Title
  *
- * @version 2.6.0
+ * @version 2.6.1
  * @since   2.3.0
  *
  * @author WPFactory
@@ -14,32 +14,45 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CPG_Module_Product_Title' ) ) :
 
+	/**
+	 * Alg_WC_CPG_Module_Product_Title class.
+	 *
+	 * @version 2.6.1
+	 * @since   2.3.0
+	 */
 	class Alg_WC_CPG_Module_Product_Title extends Alg_WC_CPG_Module {
 
 		/**
-		 * get_id.
+		 * Get ID.
 		 *
 		 * @version 2.3.0
 		 * @since   2.3.0
 		 */
-		function get_id() {
+		public function get_id() {
 			return 'product_title';
 		}
 
 		/**
-		 * process.
+		 * Process.
 		 *
-		 * @version 2.3.0
+		 * @version 2.6.1
 		 * @since   2.3.0
+		 *
+		 * @param string $value The value.
+		 *
+		 * @return bool
 		 */
-		function process( $value ) {
+		public function process( $value ) {
 			$current_value = $this->get_current_value();
 			$value         = array_map( 'trim', explode( PHP_EOL, $value ) );
 			$func          = $this->get_option( false, 'func', false, 'strpos' );
 			$result        = false;
 			foreach ( $value as $_value ) {
 				foreach ( $current_value as $_current_value ) {
-					if ( false !== $func( $_current_value, $_value ) ) {
+					if (
+						in_array( $func, array( 'strpos', 'stripos' ), true ) &&
+						false !== $func( $_current_value, $_value )
+					) {
 						$result = true;
 						break;
 					}
@@ -64,52 +77,56 @@ if ( ! class_exists( 'Alg_WC_CPG_Module_Product_Title' ) ) :
 		}
 
 		/**
-		 * get_default_priority.
+		 * Get default priority.
 		 *
 		 * @version 2.4.0
 		 * @since   2.3.0
 		 */
-		function get_default_priority() {
+		public function get_default_priority() {
 			return 1300;
 		}
 
 		/**
-		 * get_title.
+		 * Get title.
 		 *
 		 * @version 2.3.0
 		 * @since   2.3.0
 		 */
-		function get_title() {
+		public function get_title() {
 			return __( 'Product Title', 'conditional-payment-gateways-for-woocommerce' );
 		}
 
 		/**
-		 * get_desc.
+		 * Get description.
 		 *
 		 * @version 2.3.0
 		 * @since   2.3.0
 		 */
-		function get_desc() {
+		public function get_desc() {
 			return __( 'Hides payment gateways by cart product titles (or descriptions).', 'conditional-payment-gateways-for-woocommerce' );
 		}
 
 		/**
-		 * get_default_notice.
+		 * Get default notice.
 		 *
 		 * @version 2.3.0
 		 * @since   2.3.0
+		 *
+		 * @param string $submodule The submodule.
+		 *
+		 * @return string
 		 */
-		function get_default_notice( $submodule ) {
+		public function get_default_notice( $submodule ) {
 			return __( '"%gateway_title%" is not available for the cart products.', 'conditional-payment-gateways-for-woocommerce' ); // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
 		}
 
 		/**
-		 * get_settings_notes.
+		 * Get settings notes.
 		 *
 		 * @version 2.6.0
 		 * @since   2.3.0
 		 */
-		function get_settings_notes() {
+		public function get_settings_notes() {
 			return array(
 				sprintf(
 					/* translators: %s: Example list of titles */
@@ -120,12 +137,12 @@ if ( ! class_exists( 'Alg_WC_CPG_Module_Product_Title' ) ) :
 		}
 
 		/**
-		 * get_extra_settings.
+		 * Get extra settings.
 		 *
 		 * @version 2.3.0
 		 * @since   2.3.0
 		 */
-		function get_extra_settings() {
+		public function get_extra_settings() {
 			return array(
 				array(
 					'title' => __( 'Settings', 'conditional-payment-gateways-for-woocommerce' ),
@@ -163,20 +180,26 @@ if ( ! class_exists( 'Alg_WC_CPG_Module_Product_Title' ) ) :
 		}
 
 		/**
-		 * get_current_value.
+		 * Get current value.
 		 *
-		 * @version 2.3.0
+		 * @version 2.6.1
 		 * @since   2.3.0
 		 */
-		function get_current_value() {
+		public function get_current_value() {
 			if ( ! isset( $this->current_value ) ) {
 				$this->current_value = array();
 				if ( isset( WC()->cart ) ) {
 					$data_source = $this->get_option( false, 'source', false, array( 'get_title' ) );
 					foreach ( WC()->cart->get_cart() as $item ) {
-						if ( ( $product = $item['data'] ) ) {
+						$product = $item['data'];
+						if ( $product ) {
 							foreach ( $data_source as $source ) {
-								$this->current_value[] = $product->{$source}();
+								if (
+									in_array( $source, array( 'get_title', 'get_description', 'get_short_description' ), true ) &&
+									is_callable( array( $product, $source ) )
+								) {
+									$this->current_value[] = $product->{$source}();
+								}
 							}
 						}
 					}
