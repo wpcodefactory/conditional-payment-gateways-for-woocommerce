@@ -4,7 +4,7 @@ Tags: woocommerce, payment gateway, woo commerce
 Requires at least: 4.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.6.1
+Stable tag: 2.6.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -49,6 +49,11 @@ Plugin includes these **modules** (i.e., "conditions"):
 3. Start by visiting plugin settings at "WPFactory > Conditional Payment Gateways".
 
 == Changelog ==
+
+= 2.6.2 - 23/11/2026 =
+* WC tested up to: 11.3.
+* Dev - WPFactory Admin Menu - Library updated (to v1.1.4).
+* Dev - WPFactory Cross-Selling - Library updated (to v1.1.7).
 
 = 2.6.1 - 09/10/2026 =
 * Dev - Modules - Product Title - Product data - Function names allowlisted.
